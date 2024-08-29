@@ -1,0 +1,5 @@
+export { Home as Home} from '../pages/Home'
+export { Lojas as Lojas } from '../pages/Lojas'
+export { Perfil as Perfil } from '../pages/Perfil'
+export { Contacte as Contacte } from '../pages/Contacte'
+export { Layout as Layout } from '../pages/Layout'

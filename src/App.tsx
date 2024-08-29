@@ -1,9 +1,12 @@
-function App() {
+import { GlobalStyle } from "./styles/GlobalStyle";
+import { Rotas } from "./routes"
+import { BrowserRouter } from "react-router-dom"
+
+export function App() {
   return (
-    <>
-      <h1>oi</h1>
-    </>
+    <BrowserRouter>
+      <GlobalStyle />
+      <Rotas />
+    </BrowserRouter>
   )
 }
-
-export default App
