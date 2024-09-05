@@ -13,7 +13,9 @@ export const colors = {
   black: "#000",
   white: "#fff",
   Principal: "#1A2B3A",
-  Inicial: "linear-gradient(#1A2B3A,#41586D)",
+  Gradiente1: "#1A2B3A",
+  Gradiente2: "#41586D",
   Fundo: "#DFD6C5",
-  Secundaria: "#D0973A"
+  Secundaria: "#D0973A",
+  TextoNav: "#D9D9D9"
 }
