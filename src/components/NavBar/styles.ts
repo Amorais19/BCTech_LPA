@@ -3,7 +3,7 @@ import { colors } from "../../styles/GlobalStyle"
 
 export const NavBar = styled.aside`
     display: flex;
-    padding: 1.5rem;
+    padding: 1rem;
     align-items: center;
     justify-content: space-evenly;
 
@@ -13,17 +13,20 @@ export const NavBar = styled.aside`
         align-items: center;
         justify-content: space-evenly;
     }
+
     ul {
         display: flex;
         width: 100%;
         align-items: center;
         justify-content: space-evenly;
     }
+
     a {
         text-decoration: none;
     }
+
     p {
-        color: ${colors.TextoNav};
+        color: ${colors.navBarTitle};
         font-family: 'Signika';
         font-size: x-large
     }

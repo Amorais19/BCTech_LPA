@@ -12,22 +12,22 @@ export function Footer() {
                 <div id="sessao">
                     <h3 id="title">Menu</h3>
                     <div id="icons">
-                        <img src="src/assets/home.png" alt="home" />
-                        <a href=""><p id="text">Home</p></a>
+                        <img src="src/assets/home.png" alt="home" id="img"/>
+                        <a href="/Home"><p id="text">Home</p></a>
                     </div>
                     <div id="icons">
-                        <img src="src/assets/contacte.png" alt="contacte-nos" />
-                        <a href=""><p id="text">Contacte-nos</p></a>
+                        <img src="src/assets/contacte.png" alt="contacte-nos" id="img"/>
+                        <a href="/Contacte-nos"><p id="text">Contacte-nos</p></a>
                     </div>
                 </div>
                 <div id="sessao">
                     <h3 id="title">Junte-se a nós</h3>
                     <div id="icons">
-                        <img src="src/assets/cadastro.png" alt="cadastre-se" />
+                        <img src="src/assets/cadastro.png" alt="cadastre-se" id="img"/>
                         <a href=""><p id="text">Cadastre-se</p></a>
                     </div>
                     <div id="icons">
-                        <img src="src/assets/login.png" alt="login" />
+                        <img src="src/assets/login.png" alt="login" id="img"/>
                         <a href=""><p id="text">Login</p></a>
                     </div>
                 </div>

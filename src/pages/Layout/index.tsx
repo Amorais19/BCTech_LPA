@@ -5,7 +5,6 @@ import * as S from "./styles"
 export function Layout() {
   return (
     <>
-      
       <S.Main>
         <Nav />
         <Outlet />
