@@ -10,7 +10,7 @@ export function Home() {
         
       </section>
       <section id='funcionalidades'>
-        <div id='title'>
+        <div>
           <p id='topico'>Explore nossas</p>
           <h1>FUNCIONALIDADES <span id='line'></span></h1>
         </div>

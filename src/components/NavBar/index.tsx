@@ -10,7 +10,7 @@ export function NavBar() {
       </style>
       <nav>
         <ul>
-          <ol><a href="/Home"><p>Home</p></a></ol>
+          <ol><a href="/"><p>Home</p></a></ol>
           <ol><a href="/Lojas"><p>Lojas</p></a></ol>
           <ol><a href="/Perfil"><p>Perfil</p></a></ol>
           <ol><a href="/Contacte-nos"><p>Contacte-nos</p></a></ol>
