@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom"
-import { Home, Lojas, Perfil, Contacte, Layout } from "../pages"
+import { Home, Lojas, Perfil, Contacte, CadastroE, Layout, CadastroU, Login } from "../pages"
 
 export function Rotas() {
     return (
@@ -9,6 +9,9 @@ export function Rotas() {
             <Route path="/Lojas" element={<Lojas />} />
             <Route path="/Perfil" element={<Perfil />} />
             <Route path="/Contacte-nos" element={<Contacte />} />
+            <Route path="/Cadastre-se_Empresa" element={<CadastroE /> } />
+            <Route path="/Cadastre-se_Usuario" element={<CadastroU /> } />
+            <Route path="/Login" element={<Login /> } />
         </Route>
       </Routes>
     )

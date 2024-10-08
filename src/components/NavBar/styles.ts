@@ -30,4 +30,9 @@ export const NavBar = styled.aside`
         font-family: 'Signika';
         font-size: x-large
     }
+    nav ul ol:hover {
+    text-decoration: underline;
+    color: ${colors.white};
+  }
+
 `

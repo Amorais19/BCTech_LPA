@@ -1,7 +1,10 @@
-import { colors } from "../../styles/GlobalStyle"
-import * as S from "./styles"
+import { Link, useLocation } from "react-router-dom";
+import { colors } from "../../styles/GlobalStyle";
+import * as S from "./styles";
 
 export function NavBar() {
+  const location = useLocation(); // Obtém a localização atual
+
   return (
     <S.NavBar>
       <style>
@@ -10,12 +13,36 @@ export function NavBar() {
       </style>
       <nav>
         <ul>
-          <ol><a href="/"><p>Home</p></a></ol>
-          <ol><a href="/Lojas"><p>Lojas</p></a></ol>
-          <ol><a href="/Perfil"><p>Perfil</p></a></ol>
-          <ol><a href="/Contacte-nos"><p>Contacte-nos</p></a></ol>
+          <li>
+            <Link to="/">
+              <p style={{ color: location.pathname === "/" ? colors.white : colors.navBarTitle }}>
+                Home
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link to="/Lojas">
+              <p style={{ color: location.pathname === "/Lojas" ? colors.white : colors.navBarTitle }}>
+                Lojas
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link to="/Perfil">
+              <p style={{ color: location.pathname === "/Perfil" ? colors.white : colors.navBarTitle }}>
+                Perfil
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link to="/Contacte-nos">
+              <p style={{ color: location.pathname === "/Contacte-nos" ? colors.white : colors.navBarTitle }}>
+                Contacte-nos
+              </p>
+            </Link>
+          </li>
         </ul>
       </nav>
     </S.NavBar>
-  )
+  );
 }

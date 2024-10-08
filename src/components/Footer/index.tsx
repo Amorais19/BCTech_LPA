@@ -24,11 +24,11 @@ export function Footer() {
                     <h3 id="title">Junte-se a nós</h3>
                     <div id="icons">
                         <img src="src/assets/cadastro.png" alt="cadastre-se" id="img"/>
-                        <a href=""><p id="text">Cadastre-se</p></a>
+                        <a href="/Cadastre-se_Empresa"><p id="text">Cadastre-se</p></a>
                     </div>
                     <div id="icons">
                         <img src="src/assets/login.png" alt="login" id="img"/>
-                        <a href=""><p id="text">Login</p></a>
+                        <a href="/Login"><p id="text">Login</p></a>
                     </div>
                 </div>
             </section>

@@ -11,7 +11,9 @@ export const GlobalStyle = createGlobalStyle`
 `
 export const colors = {
   black: "#000",
+  blackOpac: "#00000040",
   white: "#fff", 
+  whiteOpac: "#ffffff90",
   roxoPrincipal: '#5836BB',
   roxoOpac: '#5836BB40',
   roxoSecundario: '#1A0F3A',
