@@ -10,7 +10,7 @@ export const Section = styled.section`
 
     #fundoB {
         display: flex;
-        width: 100vw;
+        width: 100%;
         height: 8rem;
         justify-content: flex-start;
         align-items: center;
@@ -96,6 +96,7 @@ export const Section = styled.section`
     #buttonDiv {
         display: flex;
         gap: 1rem;
+        margin: 2rem 0 3rem 0;
     }
     li {
         list-style: none;

@@ -55,20 +55,17 @@ export function Contacte() {
         </div>
         <div id='suporte'>
           <h3>SUPORTE</h3>
-          <div>
-            <p>Nome</p>
-            <input type="text" />
-            <label htmlFor=""></label>
+          <div id="campo">
+            <label htmlFor="name" id="titulo">Nome</label>
+            <input type="name" name="name" id="dados" placeholder="Insira aqui seu nome"/>
           </div>
-          <div>
-            <p>E-mail</p>
-            <input type="text" />
-            <label htmlFor=""></label>
+          <div id="campo">
+            <label htmlFor="email" id="titulo">E-mail</label>
+            <input type="email" name="email" id="dados" placeholder="Insira aqui seu e-mail"/>
           </div>
-          <div>
-            <p>Mensagem</p>
-            <input type="text" />
-            <label htmlFor=""></label>
+          <div id="campo">
+            <label htmlFor="mensagem" id="titulo">Mensagem</label>
+            <input type="mensagem" name="mensagem" id="dados" placeholder="Mensagem..."/>
           </div>
           <div id="buttonDiv">
             <Button link="/Cadastre-se_Empresa" text="ENVIAR" />

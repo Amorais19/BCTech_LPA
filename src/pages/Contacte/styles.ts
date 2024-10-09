@@ -53,7 +53,7 @@ export const Section = styled.section`
   }
 
   #contatos {
-    padding: 2rem;
+    padding: 2rem 0;
   }
 
   #grid {
@@ -78,8 +78,6 @@ export const Section = styled.section`
     color: ${colors.white};
     font-weight: bold; 
   }
- 
-  
 
   #subtext {
     font-family: 'Raleway';
@@ -88,24 +86,28 @@ export const Section = styled.section`
     padding-top: 0.5rem;
   }
 
-  .mapa {
-    width: 25rem;
-    height: 15rem;
-    border: 2px solid ${colors.roxoOpac};
-    margin-top: 2rem;
-    border-radius: 15px; /* Adicione bordas arredondadas, se desejar */
+  #mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 2rem 0;
+  }
+
+  iframe {
+    border-radius: 10px;
+    width: 92%;
+    height: 20rem;
   }
 
   #suporte {
     background-color: ${colors.blackFundo};
-    border-radius: 20px;
-    width: 100%;
-    height: 90%;
-    margin: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    width: 120%;
+    height: 90%;
+    border-radius: 20px;
   }
 
   h3 {
@@ -129,26 +131,13 @@ export const Section = styled.section`
     padding-bottom: 0.5rem;
   }
 
-  input {
+  #dados {
     background-color: ${colors.blackOpac};
-    padding: 0%.5;
     border: 1px solid ${colors.roxoPrincipal};
-    font-size: medium;
     border-radius: 10px;
+    padding: 1rem;
+    font-size: medium;
     color: ${colors.whiteOpac};
-    width: 35rem;
-  }
-  input, text {
-    background: ${colors.blackOpac};
-    border: 1px solid ${colors.roxoPrincipal};
-    border-radius: 5px;
-    padding: 0.8rem;
-    color: ${colors.white};
-    width: 100%;
-  }
-  label {
-    font-family: 'Raleway', sans-serif;
-    color: ${colors.white};
   }
 
   #botao {
@@ -160,22 +149,6 @@ export const Section = styled.section`
     font-size: large;
     color: ${colors.white};
     font-weight: 600;
-  }
-
-  #mapa {
-    width: 80%; /* Preencher o contêiner */
-    max-width: 600px; /* Largura máxima do mapa */
-    height: 300px; /* Altura fixa do mapa */
-    margin-top: 2rem;
-    border-radius: 10px; /* Bordas arredondadas */
-    overflow: hidden; /* Para garantir que o conteúdo não transborde */
-    position: relative; /* Para o iframe */
-  }
-
-  .mapa iframe {
-    width: 60%; /* Preencher a largura do contêiner */
-    height: 60%; /* Preencher a altura do contêiner */
-    border: 0; /* Remover bordas do iframe */
   }
 
   #buttonDiv {

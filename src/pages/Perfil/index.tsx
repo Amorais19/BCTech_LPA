@@ -9,9 +9,7 @@ export function Perfil() {
       </style>
 
       {/* div da parte que volta */}
-      <div id='fundoB'> 
-          
-      </div>
+      <div id='fundoB' />
 
       <section id='foto'>
         <div id="pessoa">
