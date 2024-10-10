@@ -7,7 +7,11 @@ export function Home() {
         {`@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap');`}
       </style>
 
-      <section id='linear'></section>
+      <section id='linear'>
+      <picture>
+      <img src="src/assets/logo.png" alt="logo" id='logo' />
+      </picture>
+      </section>
 
       <section id='funcionalidades'>
         <div>

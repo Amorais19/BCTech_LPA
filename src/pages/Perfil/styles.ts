@@ -128,4 +128,37 @@ export const Section = styled.section`
         transform: scale(1.05); /* Aumenta ligeiramente ao passar o mouse */
 
     }
+
+    button {
+        display: block;
+        margin: 20x auto;
+        background-color: aliceblue;
+        color: white;
+        border: 0;
+        cursor: pointer;
+        padding: 6px 10px;
+    }
+
+    .popup {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); //adicionar o blur aqui
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .popup-content {
+        background: ${colors.blackFundo};
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        width: 25rem;
+        height: 35rem;
+        border-radius: 1rem;
+    }
 `;
