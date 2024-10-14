@@ -5,6 +5,7 @@ export const Section = styled.section`
   align-items: center;
   justify-content: center;
 
+  /* Estilo do Header */
   #header {
     display: inline-block;
     position: relative;
@@ -20,6 +21,7 @@ export const Section = styled.section`
     height: 30rem;
   }
 
+  /*Textos*/
   #textos {
     position: absolute;
     width: 100%;
@@ -45,6 +47,27 @@ export const Section = styled.section`
     padding-top: 4rem;
   }
 
+  #subtitle {
+    font-family: 'Raleway';
+    color: ${colors.white};
+    font-weight: bold; 
+  }
+
+  #subtext {
+    font-family: 'Raleway';
+    font-size: smaller;
+    color: ${colors.white};
+    padding-top: 0.5rem;
+  }
+
+  #titulo {
+    font-family: 'Raleway';
+    font-size: large;
+    color: ${colors.white};
+    padding-bottom: 0.5rem;
+  }
+
+  /* Estilo do Conteúdo */
   #conteudo {
     display: grid;
     grid-template-columns: auto auto;
@@ -73,24 +96,12 @@ export const Section = styled.section`
     justify-content: center;
   }
 
-  #subtitle {
-    font-family: 'Raleway';
-    color: ${colors.white};
-    font-weight: bold; 
-  }
-
-  #subtext {
-    font-family: 'Raleway';
-    font-size: smaller;
-    color: ${colors.white};
-    padding-top: 0.5rem;
-  }
 
   #mapa {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0;
   }
 
   iframe {
@@ -99,6 +110,7 @@ export const Section = styled.section`
     height: 20rem;
   }
 
+  /* Estilo do Suporte */
   #suporte {
     background-color: ${colors.blackFundo};
     display: flex;
@@ -112,23 +124,14 @@ export const Section = styled.section`
 
   h3 {
     font-family: 'Reem Kufi';
-    font-size: xx-large;
-    color: ${colors.white};
     font-size: 60px;
-    
+    color: ${colors.white};
   }
 
   #campo {
     width: 80%;
     display: flex;
     flex-direction: column;
-  }
-
-  #titulo {
-    font-family: 'Raleway';
-    font-size: large;
-    color: ${colors.white};
-    padding-bottom: 0.5rem;
   }
 
   #dados {
@@ -140,40 +143,31 @@ export const Section = styled.section`
     color: ${colors.whiteOpac};
   }
 
-  #botao {
-    background-color: ${colors.roxoPrincipal};
-    width: 80%;
-    padding: 1rem;
-    border-radius: 30px;
-    font-family: 'Raleway';
-    font-size: large;
-    color: ${colors.white};
-    font-weight: 600;
+  /* Estilo do Botão */
+  #buttonDiv {
+    display: flex;
+    gap: 3rem;
   }
 
-  #buttonDiv {
-        display: flex;
-        gap: 3rem;
-    }
-    li {
-        list-style: none;
-        background-color: ${colors.roxoPrincipal};
-        border-radius: 40px;
-        transition: background-color 300ms, transform 300ms;
-        display: inline-flex; /* Troque para inline-flex para usar flexbox */
-        align-items: center; /* Centraliza verticalmente */
-        justify-content: center; /* Centraliza horizontalmente */
-        width: 25rem;
-        height: 4rem;
-        text-align: center; /* Text align opcional para maior segurança */
-    }
+  li {
+    list-style: none;
+    background-color: ${colors.roxoPrincipal};
+    border-radius: 40px;
+    transition: background-color 300ms, transform 300ms;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 4rem;
+    text-align: center;
+  }
 
-    li a {
-        color: ${colors.white};
-        font-family: 'Raleway';
-        font-size: large;
-        font-weight: bold;
-        text-decoration: none; /* Remove sublinhado */
-        display: inline-block; /* Mantém como inline-block */
-    }
+  li a {
+    color: ${colors.white};
+    font-family: 'Raleway';
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+  }
 `;

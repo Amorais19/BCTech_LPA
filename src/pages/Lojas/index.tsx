@@ -13,7 +13,7 @@ export function Lojas() {
     <img src="src/assets/anuncio5.png" alt="Anúncio 5" id='img' />,
   ];
 
-  const lojasArray = Array.from({ length: 13 }, (_, index) => ({
+  const lojasArray = Array.from({ length: 12 }, (_, index) => ({
     id: index,
     nome: `Loja ${index + 1}`,
     descricao: 'Texto referente à empresa. Texto bem minimalista feito pela empresa.',

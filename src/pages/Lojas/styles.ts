@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../styles/GlobalStyle';
 
 export const Section = styled.section`
+  /* Estilização Geral */
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Alinhado à esquerda */
@@ -11,6 +12,7 @@ export const Section = styled.section`
   font-family: 'Raleway', sans-serif;
   margin: 0; /* Remove margens ao redor da seção */
 
+  /* Carrossel */
   #carrossel {
     width: 100%;
     margin-top: 2rem;
@@ -22,17 +24,11 @@ export const Section = styled.section`
     object-fit: cover;
   }
 
+  /* Seção de Lojas */
   #lojas {
     width: 100%;
     padding: 2rem 0; /* Remover padding lateral */
     margin-top: 2rem;
-  }
-
-  #title {
-    text-align: left;
-    margin-bottom: 2rem;
-    padding-left: 1rem; /* Padding à esquerda para o título */
-    width: 100%; /* Faz com que o título ocupe toda a largura */
   }
 
   #topico {
@@ -41,6 +37,7 @@ export const Section = styled.section`
     font-size: 1.2rem;
   }
 
+  /* Textos */
   h1 {
     color: ${colors.white};
     font-family: 'Reem Kufi', sans-serif;
@@ -53,15 +50,25 @@ export const Section = styled.section`
     border-bottom: 2px solid ${colors.roxoPrincipal};
   }
 
-  #lojasGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Definindo 4 colunas */
-    gap: 2rem; /* Espaçamento entre os itens */
-    width: 100%; /* Garantir que ocupe toda a largura */
-    margin: 0; /* Remove margens para garantir que as lojas comecem na esquerda */
-    padding: 0 1rem; /* Padding lateral para espaçamento */
+  #title {
+    text-align: left;
+    margin-bottom: 2rem;
+    padding-left: 1rem; /* Padding à esquerda para o título */
+    width: 100%; /* Faz com que o título ocupe toda a largura */
   }
 
+  h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem 0;
+    color: ${colors.navBarTitle};
+  }
+
+  /* Loja */
   .loja {
     background: ${colors.black};
     border-radius: 8px;
@@ -74,6 +81,15 @@ export const Section = styled.section`
     }
   }
 
+  #lojasGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Definindo 4 colunas */
+    gap: 2rem; /* Espaçamento entre os itens */
+    width: 100%; /* Garantir que ocupe toda a largura */
+    margin: 0; /* Remove margens para garantir que as lojas comecem na esquerda */
+    padding: 0 1rem; /* Padding lateral para espaçamento */
+  }
+
   .lojaImg {
     width: 100%; /* Largura total do contêiner */
     height: auto; /* Permite que a altura seja automática para manter a proporção */
@@ -81,17 +97,6 @@ export const Section = styled.section`
     object-fit: cover; /* Ajusta a imagem para preencher o espaço */
     margin-bottom: 1rem;
     border-radius: 8px;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-  }
-
-  p {
-    font-size: 0.9rem;
-    margin: 0.5rem 0 1rem 0;
-    color: ${colors.navBarTitle};
   }
 
   .stars {

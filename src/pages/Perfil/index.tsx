@@ -1,5 +1,5 @@
-import * as S from './styles'
-import React, { useState } from 'react'
+import * as S from './styles';
+import { useState } from 'react';
 
 export function Perfil() {
   const [showPopup, setShowPopup] = useState(false);
@@ -18,16 +18,17 @@ export function Perfil() {
         @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap');
       </style>
 
-      {/* div da parte que volta */}
+      {/* Div do Fundo */}
       <div id='fundoB' />
 
+      {/* Seção da Foto */}
       <section id='foto'>
         <div id="pessoa">
           <img src="src/assets/usuariog.png" alt="foto" id="usuariog" />
         </div>
       </section>
 
-      {/* div do body */}
+      {/* Div do Corpo */}
       <div id='allbody'>
         <h3>Dados Pessoais</h3>
         <div id='body'>
@@ -59,41 +60,38 @@ export function Perfil() {
         </div>
       </div>
 
-      {/* div dos botoes */}
+      {/* Div dos Botões */}
       <div id="buttonDiv">
         <button onClick={handleDeleteClick}> EXCLUIR </button>
-        <button> EDITAR </button>
+        <button onClick={() => window.location.href = '/PerfilEditar'}> EDITAR </button>
       </div>
 
       {/* Pop-up */}
       {showPopup && (
         <div className="popup">
           <div className="popup-content">
-            <h3>Tem certeza que deseja excluir?</h3>
-            
-            <div id="layout">
-              <div>
-                <div id="linhas">
-                  <div id='campo'>
-                    <label htmlFor="mensagem" id="titulo" >Senha</label>
-                    <input type="mensagem" name="mensagem" placeholder="Insira sua senha" id="input" className="mensagem"/>
-                  </div>
-                  <div id='campo'>
-                    <label htmlFor="mensagem" id="titulo" >Confirmar Senha</label>
-                    <input type="mensagem" name="mensagem" placeholder="Insira sua senha novamente" id="input" className="mensagem"/>
-                  </div>
-                </div>
-              </div>
+            <div id="title">
+              <h2>VOCÊ TEM <br /> CERTEZA DISSO?</h2>
             </div>
 
-            <button onClick={handleClosePopup}>Cancelar</button>
-            <button onClick={() => {
-              // Adicione aqui a lógica para excluir
-              handleClosePopup();
-            }}>Confirmar</button>
+            <div id='campoPop'>
+              <label htmlFor="mensagem" id="titulo">Senha</label>
+              <label id="icone">
+                <input type="mensagem" name="mensagem" placeholder="Insira sua senha" className='input-icon' />
+              </label>
+            </div>
+            <div id='campoPop'>
+              <label htmlFor="mensagem" id="titulo">Confirmar Senha</label>
+              <input type="mensagem" name="mensagem" placeholder="Insira sua senha novamente" className='input-icon' />
+            </div>
+
+            <div id="buttonDiv">
+              <button onClick={handleClosePopup} id='botaoCancel'>CANCELAR</button>
+              <button onClick={() => window.location.href = '/Home'}>EXCLUIR</button>
+            </div>
           </div>
         </div>
       )}
     </S.Section>
-  )
+  );
 }

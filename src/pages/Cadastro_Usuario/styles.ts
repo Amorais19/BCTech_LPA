@@ -1,26 +1,18 @@
-import styled from 'styled-components'
-import { colors, gradientes } from '../../styles/GlobalStyle'
+import styled from 'styled-components';
+import { colors } from '../../styles/GlobalStyle';
 
 export const Section = styled.section`
+    /* Layout do Background */
     #background {
         width: 99vw;
         height: calc(100vh - 12.90rem);
         background: linear-gradient(${colors.black}, ${colors.roxoSecundario});
+        display: flex;
         justify-content: center;
         align-items: center;
-        display: flex;
     }
 
-    #fundoB {
-        justify-content: flex-start;
-        align-items: start;
-        padding-left: 5rem;
-    }
-    #layout {
-        display: flex;
-        gap: 3rem;
-    }
-
+    /* Estilo do Cabeçalho */
     h1 {
         color: ${colors.roxoPrincipal};
         font-weight: bold;
@@ -28,8 +20,12 @@ export const Section = styled.section`
         font-family: 'Reem Kufi';
     }
 
+    /* Estilo da Imagem */
+    img {
+        width: 5rem;
+    }
 
-
+    /* Estilo do Formulário */
     #formulario {
         background-color: ${colors.blackOpac};
         border-radius: 20px;
@@ -41,24 +37,21 @@ export const Section = styled.section`
         justify-content: space-evenly;
         border: 0.2rem solid ${colors.roxoPrincipal};
     }
+
+    /* Estilo dos Campos */
+    #campo,
+    #campoE {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
     #campo {
         width: 31rem;
-        display: flex;
-        flex-direction: column;
-        padding-top: 1rem;
     }
+
     #campoE {
         width: 65rem;
-        display: flex;
-        flex-direction: column;
-        padding-top: 1rem;
-    }
-    #titulo {
-        font-family: 'Raleway';
-        font-size: large;
-        font-weight: bold;
-        color: ${colors.white};
-        padding-bottom: 0.5rem;
     }
     #input {
         background-color: ${colors.blackFundo};
@@ -68,33 +61,33 @@ export const Section = styled.section`
         border-radius: 10px;
         color: ${colors.whiteOpac};
     }
-    #botao {
-        background-color: ${colors.roxoPrincipal};
-        width: 80%;
-        padding: 1rem;
-        border-radius: 30px;
+
+    /* Estilo do Título do Campo */
+    #titulo {
         font-family: 'Raleway';
         font-size: large;
+        font-weight: bold;
         color: ${colors.white};
-        font-weight: 600;
+        padding-bottom: 0.5rem;
     }
 
-
+    /* Botões */
     #buttonDiv {
         display: flex;
         gap: 3rem;
     }
+
     li {
         list-style: none;
         background-color: ${colors.blackFundo};
         border-radius: 12px;
         transition: background-color 300ms, transform 300ms;
-        display: inline-flex; /* Troque para inline-flex para usar flexbox */
-        align-items: center; /* Centraliza verticalmente */
-        justify-content: center; /* Centraliza horizontalmente */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         width: 12rem;
         height: 3rem;
-        text-align: center; /* Text align opcional para maior segurança */
+        text-align: center;
     }
 
     li a {
@@ -102,29 +95,23 @@ export const Section = styled.section`
         font-family: 'Raleway';
         font-size: large;
         font-weight: bold;
-        text-decoration: none; /* Remove sublinhado */
-        display: inline-block; /* Mantém como inline-block */
+        text-decoration: none;
+        display: inline-block;
     }
 
     li:hover {
         background-color: ${colors.roxoOpac};
-        transform: scale(1.05); /* Aumenta ligeiramente ao passar o mouse */
+        transform: scale(1.05);
     }
+
     li a:hover {
         color: white;
-        transform: scale(1.05); /* Aumenta ligeiramente ao passar o mouse */
-
+        transform: scale(1.05);
     }
 
-    #icones {
-        width: 20px;
-        height: 20px;
-        margin-right: 1rem;
-    }
-
+    /* Estilo das Linhas */
     #linhas {
         display: flex;
         gap: 3rem;
     }
-
-`
+`;

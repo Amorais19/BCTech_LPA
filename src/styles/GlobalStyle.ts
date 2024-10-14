@@ -8,28 +8,38 @@ export const GlobalStyle = createGlobalStyle`
     border: 0;
     box-sizing: border-box;
   }
-`
+ `
 export const colors = {
-  black: "#000",
-  blackOpac: "#00000040",
-  white: "#fff", 
-  whiteOpac: "#ffffff90",
-  roxoPrincipal: '#5836BB',
-  roxoOpac: '#5836BB40',
-  roxoSecundario: '#1A0F3A',
-  navBarTitle: '#929292',
-  blackFundo: '#202020',
-  footerTitle: '#D8B782',
+  // Cores sólidas
+  black: "#000",                // Preto
+  blackOpac: "#00000040",      // Preto com opacidade
+  white: "#fff",                // Branco
+  whiteOpac: "#ffffff90",       // Branco com opacidade
+
+  // Tons de roxo
+  roxoPrincipal: '#5836BB',     // Roxo Principal
+  roxoOpac: '#5836BB40',        // Roxo com opacidade
+  roxoSecundario: '#1A0F3A',    // Roxo Secundário
+
+  // Outras cores
+  navBarTitle: '#929292',       // Título da Navbar
+  blackFundo: '#202020',        // Fundo Preto
+  footerTitle: '#D8B782',       // Título do Rodapé
+  grayInput: '#65646A',         // Cinza para Inputs
+  grayFundo: '#524E4E',    // Fundo Cinza
 }
 
 export const gradientes = {
-  purpleO: '#1B006940',
-  purpleT: '#372D5325',
-  blackO: '#11101050',
-  blackT: '#0E0E0E',
-  greyO: '#0C0C0E',
-  greyT: '#5C575750',
-  purpleButtonO: '#5C4B8C',
-  purpleButtonT: '#322065',
+  // Gradientes com opacidade
+  purpleO: '#1B006940',        // Gradiente Roxo Opaco
+  purpleT: '#372D5325',        // Gradiente Roxo Translúcido
+  blackO: '#11101050',         // Gradiente Preto Opaco
+  blackT: '#0E0E0E',           // Gradiente Preto Translúcido
+  greyO: '#0C0C0E',            // Gradiente Cinza Opaco
+  greyT: '#5C575750',          // Gradiente Cinza Translúcido
 
+  // Gradientes de botão
+  purpleButtonO: '#5C4B8C',    // Gradiente Roxo Botão Opaco
+  purpleButtonT: '#322065',     // Gradiente Roxo Botão Translúcido
 }
+

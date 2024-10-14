@@ -13,7 +13,7 @@ export function Footer() {
                     <h3 id="title">Menu</h3>
                     <div id="icons">
                         <img src="src/assets/home.png" alt="home" id="img"/>
-                        <a href="/"><p id="text">Home</p></a>
+                        <a href="/Home"><p id="text">Home</p></a>
                     </div>
                     <div id="icons">
                         <img src="src/assets/contacte.png" alt="contacte-nos" id="img"/>

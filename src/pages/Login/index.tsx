@@ -1,4 +1,6 @@
-import * as S from './styles'
+import * as S from './styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 
 export function Login() {
   return (
@@ -7,43 +9,46 @@ export function Login() {
         {`@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap');`}
       </style>
 
+      {/* Seção de Navegação */}
       <div id='fundoB'> 
-        <img src="src/assets/voltar.png" alt="voltar" id='img'/>
+        <a href="/Home">
+          <img src="src/assets/voltar.png" alt="voltar" id='img'/>
+        </a>
       </div>
-      
+
+      {/* Seção Principal */}
       <div id="background">
-        
-          <div id='formulario'>
+        <div id='formulario'>
           <h1>Login</h1>
-            
-            <div id="layout">
-              <div>
-                <div id="linhas">
-                  <div id='campo'>
-                    <label htmlFor="nome" id="titulo" >Nome</label>
-                    <input type="name" name="nome" placeholder="Insira seu nome" id="input"/>
-                  </div>
-                  <div id='campo'>
-                    <label htmlFor="nome" id="titulo" >E-mail</label>
-                    <input type="name" name="nome" placeholder="Insira seu e-mail" id="input"/>
-                  </div>
-                  <div id='campo'>
-                    <label htmlFor="mensagem" id="titulo" >Senha</label>
-                    <input type="mensagem" name="mensagem" placeholder="Insira sua senha" id="input" className="mensagem"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="buttonDiv">
-              <Button link="/Cadastre-se_Empresa" text="CANCELAR" />
-              <Button link="/Cadastre-se" text="ENTRAR" />
+          <div id="layout">
+            <div id='linhas'>
+              <InputField label="Nome" name="nome" placeholder="Insira seu nome" icon={faUser} />
+              <InputField label="E-mail" name="email" placeholder="Insira seu e-mail" icon={faEnvelope} />
+              <InputField label="Senha" name="senha" type="password" placeholder="Insira sua senha" icon={faLock} />
             </div>
           </div>
-        </div>  
+          <div id="buttonDiv">
+            <Button link="/Cadastre-se_Empresa" text="CANCELAR" />
+            <Button link="/Lojas" text="ENTRAR" />
+          </div>
+        </div>
+      </div>  
     </S.Section>
-  )
+  );
 }
 
+// Componente de Campo de Entrada
+const InputField: React.FC<{ label: string; name: string; placeholder: string; type?: string; icon: any }> = ({ label, name, placeholder, type = "text", icon }) => (
+  <div id='campo'>
+    <label htmlFor={name} id="titulo">{label}</label>
+    <div id="inputContainer">
+      <FontAwesomeIcon icon={icon} id="icon" />
+      <input type={type} name={name} placeholder={placeholder} id="input" />
+    </div>
+  </div>
+);
+
+// Componente do Botão
 interface ButtonProps {
   link: string;
   text: string;
@@ -51,8 +56,6 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ link, text }) => (
   <li>
-    <a href={link} id="center">
-      {text}
-    </a>
+    <a href={link} id="center">{text}</a>
   </li>
 );

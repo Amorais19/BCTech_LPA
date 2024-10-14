@@ -1,5 +1,6 @@
 import * as S from './styles';
 
+// Componente principal Home
 export function Home() {
   return (
     <S.Section>
@@ -7,12 +8,14 @@ export function Home() {
         {`@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap');`}
       </style>
 
-      <section id='linear'>
-      <picture>
-      <img src="src/assets/logo.png" alt="logo" id='logo' />
-      </picture>
+      {/* Seção de Cabeçalho */}
+      <section className='linear'>
+        <picture>
+          <img src="src/assets/logo.png" alt="logo" id='logo' />
+        </picture>
       </section>
 
+      {/* Seção de Funcionalidades */}
       <section id='funcionalidades'>
         <div>
           <p id='topico'>Explore nossas</p>
@@ -53,6 +56,7 @@ export function Home() {
         </div>
       </section>
 
+      {/* Seção Sobre */}
       <section id='sobre'>
         <img src="src/assets/mulher.png" alt="Mulher mexendo em um notebook" id='mulher' />
         <div id='width'>
@@ -69,6 +73,7 @@ export function Home() {
         </div>
       </section>
 
+      {/* Seção de Depoimentos */}
       <section id='depoimentos'>
         <h1>O que nossos usuários dizem</h1>
         <div id='depoimentoContainer'>
@@ -93,6 +98,7 @@ export function Home() {
   );
 }
 
+// Componente FeatureCard
 interface FeatureCardProps {
   imageSrc: string;
   altText: string;
@@ -109,6 +115,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ imageSrc, altText, title, des
   </div>
 );
 
+// Componente Button
 interface ButtonProps {
   link: string;
   text: string;
@@ -122,6 +129,7 @@ const Button: React.FC<ButtonProps> = ({ link, text }) => (
   </li>
 );
 
+// Componente Testimonial
 interface TestimonialProps {
   userName: string;
   feedback: string;
