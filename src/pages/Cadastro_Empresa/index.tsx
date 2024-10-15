@@ -1,4 +1,6 @@
 import * as S from './styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 
 export function Cadastro_Empresa() {
   return (
@@ -16,41 +18,26 @@ export function Cadastro_Empresa() {
       
       {/* Background e Formulário */}
       <div id="background">
+        <div id="link">
+          <a href="/Cadastre-se_Usuario">Sou Usuário</a>
+        </div>
         <div id='formulario'>
           <h1>Cadastro de Empresa</h1>
           
           {/* Layout do Formulário */}
           <div id="layout">
-            <div id='colunas'>
+            <div id='linhas'>
               {/* Primeira Coluna */}
-              <div id='campo'>
-                <label htmlFor="nome" id="titulo">Nome</label>
-                <input type="name" name="nome" placeholder="Insira seu nome" id="input"/>
-              </div>
-              <div id='campo'>
-                <label htmlFor="email" id="titulo">CPF/CNPJ</label>
-                <input type="email" name="e-mail" placeholder="Insira seu CPF/CNPJ" id="input"/>
-              </div>
-              <div id='campo'>
-                <label htmlFor="mensagem" id="titulo">Senha</label>
-                <input type="mensagem" name="mensagem" placeholder="Insira sua senha" id="input" className="mensagem"/>
-              </div>
+              <InputField label="Nome" name="nome" placeholder="Insira seu nome" icon={faUser} />
+              <InputField label="CPF/CNPJ" name="cpfCnpj" placeholder="Insira seu CPF/CNPJ" icon={faUser} />
+              <InputField label="Senha" name="senha" type="password" placeholder="Insira sua senha" icon={faLock} />
             </div>
 
             {/* Segunda Coluna */}
-            <div>
-              <div id='campo'>
-                <label htmlFor="nome" id="titulo">E-mail</label>
-                <input type="name" name="nome" placeholder="Insira seu e-mail" id="input"/>
-              </div>
-              <div id='campo'>
-                <label htmlFor="email" id="titulo">Endereço</label>
-                <input type="email" name="e-mail" placeholder="Insira seu endereço" id="input"/>
-              </div>
-              <div id='campo'>
-                <label htmlFor="mensagem" id="titulo">Confirmar Senha</label>
-                <input type="mensagem" name="mensagem" placeholder="Insira sua senha novamente" id="input" className="mensagem"/>
-              </div>
+            <div id='colunas'>
+              <InputField label="E-mail" name="email" placeholder="Insira seu e-mail" icon={faEnvelope} />
+              <InputField label="Endereço" name="endereco" placeholder="Insira seu endereço" icon={faUser} />
+              <InputField label="Confirmar Senha" name="confirmarSenha" type="password" placeholder="Insira sua senha novamente" icon={faLock} />
             </div>
           </div>
 
@@ -65,6 +52,18 @@ export function Cadastro_Empresa() {
   );
 }
 
+// Componente de Campo de Entrada
+const InputField: React.FC<{ label: string; name: string; placeholder: string; type?: string; icon: any }> = ({ label, name, placeholder, type = "text", icon }) => (
+  <div id='campo'>
+    <label htmlFor={name} id="titulo">{label}</label>
+    <div id="inputContainer">
+      <FontAwesomeIcon icon={icon} id="icon" />
+      <input type={type} name={name} placeholder={placeholder} id="input" />
+    </div>
+  </div>
+);
+
+// Componente do Botão
 interface ButtonProps {
   link: string;
   text: string;

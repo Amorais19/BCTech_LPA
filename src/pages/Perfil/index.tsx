@@ -13,7 +13,7 @@ export function Perfil() {
   };
 
   return (
-    <S.Section>
+    <S.Section id="perfilSection">
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap');
       </style>
@@ -29,7 +29,7 @@ export function Perfil() {
       </section>
 
       {/* Div do Corpo */}
-      <div id='allbody'>
+      <div id='allbody' className={showPopup ? 'blur' : ''}>
         <h3>Dados Pessoais</h3>
         <div id='body'>
           <div id='coluna'>

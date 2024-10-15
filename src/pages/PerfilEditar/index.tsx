@@ -27,7 +27,7 @@ export function PerfilEditar() {
       </section>
 
       {/* Corpo */}
-      <div id='allbody'>
+      <div id='allbody' className={showPopup || showPopupPassword ? 'blur' : ''}>
         <h3>Atualizar</h3>
         <div id='body'>
           <div id='coluna'>

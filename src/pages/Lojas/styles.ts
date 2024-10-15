@@ -32,29 +32,29 @@ export const Section = styled.section`
   }
 
   #topico {
-    color: ${colors.roxoPrincipal};
+    color: #5836BB; /* roxoPrincipal */
+    font-family: 'Raleway';
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: xx-large;
   }
 
   /* Textos */
   h1 {
+    display: flex;
+    flex-direction: column;
     color: ${colors.white};
-    font-family: 'Reem Kufi', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: xx-large;
   }
 
   #line {
-    width: 6rem;
-    border-bottom: 2px solid ${colors.roxoPrincipal};
+    width: 6.5rem;
+    border-bottom: 1px solid ${colors.roxoPrincipal};
   }
 
   #title {
-    text-align: left;
-    margin-bottom: 2rem;
-    padding-left: 1rem; /* Padding à esquerda para o título */
-    width: 100%; /* Faz com que o título ocupe toda a largura */
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 3rem 3rem;
   }
 
   h2 {

@@ -89,7 +89,7 @@ export const Section = styled.section`
     top: 50%;
     transform: translateY(-50%); /* Centraliza verticalmente */
     color: white; /* Muda a cor do ícone para branco */
-    font-size: 1.5rem; /* Tamanho do ícone */
+    font-size: 1.2rem; /* Tamanho do ícone */
   }
 
   img {

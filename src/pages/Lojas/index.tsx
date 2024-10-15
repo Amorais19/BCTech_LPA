@@ -39,7 +39,7 @@ export function Lojas() {
       <section id='lojas'>
         <div id='title'>
           <p id='topico'>Explore nossas</p>
-          <h1>LOJAS</h1>
+          <h1>LOJAS <span id='line'></span></h1>
           <span id='line'></span>
         </div>
 

@@ -25,6 +25,15 @@ export const Section = styled.section`
         width: 5rem;
     }
 
+    #icon {
+        position: absolute; /* Coloca o ícone dentro do campo de input */
+        left: 1rem; /* Ajuste a posição do ícone */
+        top: 50%;
+        transform: translateY(-50%); /* Centraliza verticalmente */
+        color: white; /* Muda a cor do ícone para branco */
+        font-size: 1.2rem; /* Tamanho do ícone */
+    }
+
     /* Estilo do Formulário */
     #formulario {
         background-color: ${colors.blackOpac};
@@ -55,11 +64,18 @@ export const Section = styled.section`
     }
     #input {
         background-color: ${colors.blackFundo};
-        padding: 1rem;
+        padding: 1rem 1rem 1rem 3rem; /* Espaço interno para ícone */
         border: 1px solid ${colors.roxoPrincipal};
         font-size: medium;
         border-radius: 10px;
         color: ${colors.whiteOpac};
+        width: 100%; /* Para garantir que o input ocupe toda a largura */
+        min-height: 3.5rem; /* Altura mínima do input */
+        transition: border-color 200ms; /* Transição suave na borda */
+    }
+
+    #inputContainer {
+        position: relative; /* Para permitir posicionamento absoluto do ícone */
     }
 
     /* Estilo do Título do Campo */
