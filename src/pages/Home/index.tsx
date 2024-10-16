@@ -80,17 +80,17 @@ export function Home() {
           <Testimonial
             userName="João Silva"
             feedback="O BCTech facilitou muito a minha vida! Encontrei a assistência que precisava rapidamente."
-            profileImage="https://via.placeholder.com/60"
+            profileImage="src/assets/homemperfil1.png"
           />
           <Testimonial
             userName="Maria Oliveira"
             feedback="A plataforma é intuitiva e tem várias opções. Recomendo a todos!"
-            profileImage="https://via.placeholder.com/60"
+            profileImage="src/assets/mulherperfil.png"
           />
           <Testimonial
             userName="Carlos Mendes"
             feedback="Excelente ideia! Meus negócios cresceram com as parcerias que encontrei aqui."
-            profileImage="https://via.placeholder.com/60"
+            profileImage="src/assets/homemperfil2.png"
           />
         </div>
       </section>
@@ -139,7 +139,7 @@ interface TestimonialProps {
 const Testimonial: React.FC<TestimonialProps> = ({ userName, feedback, profileImage }) => (
   <div className='testimonial'>
     <img src={profileImage} alt={`${userName}'s profile`} className='profileImage' />
-    <p>"{feedback}"</p>
+    <p className='name'>"{feedback}"</p>
     <h4>- {userName}</h4>
   </div>
 );

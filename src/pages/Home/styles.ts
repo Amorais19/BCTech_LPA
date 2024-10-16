@@ -198,27 +198,45 @@ export const Section = styled.section`
     color: ${colors.black};
   }
 
-  // Contêiner para os depoimentos
-  #depoimentoContainer {
-    display: flex;
-    justify-content: center; /* Centraliza os depoimentos */
-    flex-wrap: wrap; /* Permite que os depoimentos quebrem para uma nova linha se necessário */
-    gap: 1rem; /* Espaçamento entre os depoimentos */
-    width: 100%;
-    max-width: 800px;
+  // Animação dos depoimentos
+  @keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
   }
 
-  // Estilo para cada depoimento
+  // Estilização da div onde está o container
+  #depoimentoContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 2rem;
+      width: 60%;
+      height: 100%;
+  }
+
+  // Estilização dos depoimentos
   .testimonial {
-    background: ${colors.white};
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 250px;
-    transition: transform 0.3s;
-    flex: 1 1 200px; /* Permite que os depoimentos se ajustem ao espaço disponível */
+      display: flex;
+      flex-direction: column;
+      background-color: ${colors.white};
+      width: 100%;
+      height: 15rem;
+      margin: 2rem;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      font-family: 'Raleway';
+      font-size: medium;
+      border-radius: 10px;
+      padding: 1rem;
+      animation: float 3s ease-in-out infinite; /* Adiciona a animação */
   }
 
   // Estilo da imagem do perfil

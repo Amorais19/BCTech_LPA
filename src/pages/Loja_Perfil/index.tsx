@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './styles';
 import { FaUserCircle } from 'react-icons/fa';
 
-export function LojaPerfil() {
+export function Loja_Perfil() {
   return (
     <S.Section>
       <section id="quadro">

@@ -14,8 +14,8 @@ export function NavBar() {
       <nav>
         <ul>
           <li>
-            <Link to="/Home">
-              <p style={{ color: location.pathname === "/Home" ? colors.white : colors.navBarTitle }}>
+            <Link to="/">
+              <p style={{ color: location.pathname === "/" ? colors.white : colors.navBarTitle }}>
                 Home
               </p>
             </Link>

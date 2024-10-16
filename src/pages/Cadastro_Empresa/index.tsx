@@ -11,7 +11,7 @@ export function Cadastro_Empresa() {
 
       {/* Fundo e Botão de Voltar */}
       <div id='fundoB'> 
-        <a href="/Home">
+        <a href="/">
           <img src="src/assets/voltar.png" alt="voltar" id='img'/>
         </a>
       </div>

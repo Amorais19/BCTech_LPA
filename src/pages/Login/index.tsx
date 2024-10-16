@@ -11,7 +11,7 @@ export function Login() {
 
       {/* Seção de Navegação */}
       <div id='fundoB'> 
-        <a href="/Home">
+        <a href="/">
           <img src="src/assets/voltar.png" alt="voltar" id='img'/>
         </a>
       </div>

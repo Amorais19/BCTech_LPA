@@ -87,7 +87,7 @@ export function Perfil() {
 
             <div id="buttonDiv">
               <button onClick={handleClosePopup} id='botaoCancel'>CANCELAR</button>
-              <button onClick={() => window.location.href = '/Home'}>EXCLUIR</button>
+              <button onClick={() => window.location.href = "/"}>EXCLUIR</button>
             </div>
           </div>
         </div>
