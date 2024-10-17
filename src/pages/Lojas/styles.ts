@@ -73,7 +73,7 @@ export const Section = styled.section`
     background: ${colors.black};
     border-radius: 8px;
     padding: 1rem;
-    text-align: center;
+    text-align: start;
     transition: transform 0.2s; /* Transição suave */
     
     &:hover {
@@ -101,7 +101,7 @@ export const Section = styled.section`
 
   .stars {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 0.2rem;
   }
 

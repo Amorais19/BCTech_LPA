@@ -160,6 +160,12 @@ export const Section = styled.section`
     display: flex;
     justify-content: space-evenly;
     margin-left: -4rem;
+    margin-top: 2rem;
+  }
+  #botaoL {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -4rem;
   }
 
   // Estilo dos itens da lista de botões

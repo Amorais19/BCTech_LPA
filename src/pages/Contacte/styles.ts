@@ -96,7 +96,6 @@ export const Section = styled.section`
     justify-content: center;
   }
 
-
   #mapa {
     display: flex;
     align-items: center;
@@ -132,15 +131,47 @@ export const Section = styled.section`
     width: 80%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.5rem; 
   }
 
   #dados {
-    background-color: ${colors.blackOpac};
+    background-color: ${colors.blackFundo};
+    padding: 1rem 1rem 1rem 3rem; /* Espaço interno para ícone */
     border: 1px solid ${colors.roxoPrincipal};
-    border-radius: 10px;
-    padding: 1rem;
     font-size: medium;
+    border-radius: 10px;
     color: ${colors.whiteOpac};
+    width: 100%; /* Para garantir que o input ocupe toda a largura */
+    min-height: 3.5rem; /* Altura mínima do input */
+    transition: border-color 200ms; /* Transição suave na borda */
+  }
+
+  /* Estilo do Input Container */
+  #inputContainer {
+    position: relative;
+  }
+
+  input {
+    background-color: ${colors.blackFundo};
+    padding: 1rem 1rem 1rem 3rem; /* Espaço interno para ícone */
+    border: 1px solid ${colors.roxoPrincipal};
+    font-size: medium;
+    border-radius: 10px;
+    color: ${colors.whiteOpac};
+    width: 100%; /* Para garantir que o input ocupe toda a largura */
+    min-height: 3.5rem; /* Altura mínima do input */
+    transition: border-color 200ms; /* Transição suave na borda */
+  }
+  
+
+  /* Estilo do Ícone */
+  #icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1.2rem;
   }
 
   /* Estilo do Botão */
@@ -170,4 +201,38 @@ export const Section = styled.section`
     text-decoration: none;
     display: inline-block;
   }
+
+/* Estilo do Componente ContactSquare */
+#square {
+  margin: 1rem;
+  width: 15rem;
+  height: 15rem;
+  background-color: ${colors.roxoOpac};
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* Adiciona um pouco de espaçamento interno */
+}
+
+#square img {
+  width: 40%; /* Ajusta a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 1.5rem; /* Espaçamento abaixo da imagem */
+}
+
+#subtitle {
+  font-family: 'Raleway';
+  color: ${colors.white};
+  font-weight: bold; 
+}
+
+#subtext {
+  font-family: 'Raleway';
+  font-size: smaller;
+  color: ${colors.white};
+  padding-top: 0.5rem;
+  text-align: center;
+}
 `;

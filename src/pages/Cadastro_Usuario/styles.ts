@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../styles/GlobalStyle';
 
 export const Section = styled.section`
-    /* Layout do Background */
+    /* Layout */
     #background {
         width: 99vw;
         height: calc(100vh - 12.90rem);
@@ -10,6 +10,28 @@ export const Section = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+    }
+
+    #fundoB {
+        justify-content: flex-start;
+        align-items: start;
+        padding-left: 5rem;
+    }
+
+    .align {
+        display: flex;
+        align-items: center;
+        width: 75rem;
+    }
+
+    #link {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding: 1rem;
+        width: 75rem;
+        color: white
     }
 
     /* Estilo do Cabeçalho */

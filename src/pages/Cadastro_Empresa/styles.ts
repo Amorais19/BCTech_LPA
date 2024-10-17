@@ -20,8 +20,19 @@ export const Section = styled.section`
     padding-left: 5rem;
   }
 
-  link {
+  .align {
     display: flex;
+    align-items: center;
+    width: 75rem;
+  }
+
+  #link {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 1rem;
+    width: 75rem;
+    color: white
   }
 
   #layout {

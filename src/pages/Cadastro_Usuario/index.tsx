@@ -42,6 +42,9 @@ export function Cadastro_Usuario() {
             <Button link="/Cadastre-se" text="CADASTRAR-SE" />
           </div>
         </div>
+        <div id='align'>
+          <a href="/Cadastre-se_Empresa" id="link">Sou Empresa</a>
+        </div>
       </div>  
     </S.Section>
   );

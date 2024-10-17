@@ -4,19 +4,19 @@ import { colors } from '../../styles/GlobalStyle';
 export const Section = styled.section`
   /* Estilização do Background */
   #background {
-    width: 100vw;
+    width: 99vw;
     height: calc(100vh - 12.90rem);
     background: linear-gradient(${colors.black}, ${colors.roxoSecundario});
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem; /* Adiciona espaço nas bordas */
+    flex-direction: column;
   }
 
   #fundoB {
-    padding-left: 2rem; /* Ajusta o padding */
-    display: flex;
     justify-content: flex-start;
+    align-items: start;
+    padding-left: 5rem;
   }
 
   /* Estilização do Formulário */
@@ -30,6 +30,21 @@ export const Section = styled.section`
     align-items: center;
     justify-content: center;
     border: 0.2rem solid ${colors.roxoPrincipal};
+  }
+
+  .align {
+    display: flex;
+    align-items: center;
+    width: 50rem;
+  }
+
+  #link {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      padding: 1rem;
+      width: 53rem;
+      color: white
   }
 
   /* Texto */

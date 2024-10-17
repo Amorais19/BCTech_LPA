@@ -126,7 +126,7 @@ export const Section = styled.section`
     #buttonDiv {
         display: flex;
         gap: 1rem;
-        margin: 2rem 0 3rem 0;
+        margin: 1rem 0 3rem 0;
         justify-content: center;
     }
 

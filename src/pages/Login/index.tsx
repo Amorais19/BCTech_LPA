@@ -32,6 +32,9 @@ export function Login() {
             <Button link="/Lojas" text="ENTRAR" />
           </div>
         </div>
+        <div id='align'>
+          <a href="/Cadastre-se_Empresa" id="link">Registrar-se</a>
+        </div>
       </div>  
     </S.Section>
   );

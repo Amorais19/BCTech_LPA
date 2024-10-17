@@ -97,6 +97,10 @@ export function PerfilEditar() {
             {/* Conteúdo do pop-up de mudar senha */}
             <h2>Mudar Senha</h2>
             <div id='campoPop'>
+              <label htmlFor="novaSenha" id="titulo">Senha Atual</label>
+              <input type="password" name="senhaAtual" placeholder="Insira a sua senha atual" className='input-icon' />
+            </div>
+            <div id='campoPop'>
               <label htmlFor="novaSenha" id="titulo">Nova Senha</label>
               <input type="password" name="novaSenha" placeholder="Insira a nova senha" className='input-icon' />
             </div>

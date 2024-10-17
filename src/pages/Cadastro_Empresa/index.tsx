@@ -10,20 +10,18 @@ export function Cadastro_Empresa() {
       </style>
 
       {/* Fundo e Botão de Voltar */}
-      <div id='fundoB'> 
+      <div id='fundoB'>
         <a href="/">
-          <img src="src/assets/voltar.png" alt="voltar" id='img'/>
+          <img src="src/assets/voltar.png" alt="voltar" id='img' />
         </a>
       </div>
-      
+
       {/* Background e Formulário */}
+
       <div id="background">
-        <div id="link">
-          <a href="/Cadastre-se_Usuario">Sou Usuário</a>
-        </div>
         <div id='formulario'>
           <h1>Cadastro de Empresa</h1>
-          
+
           {/* Layout do Formulário */}
           <div id="layout">
             <div id='linhas'>
@@ -47,7 +45,10 @@ export function Cadastro_Empresa() {
             <Button link="/Cadastre-se" text="CADASTRAR-SE" />
           </div>
         </div>
-      </div>  
+        <div id='align'>
+          <a href="/Cadastre-se_Usuario" id="link">Sou Usuário</a>
+        </div>
+      </div>
     </S.Section>
   );
 }
