@@ -40,7 +40,7 @@ export function Loja_Perfil() {
         `}
       </style>
       <section id='quadro'>
-        <img src="src/assets/fundoperfil.jpg" alt="teclado" id='img' />
+        <img src="src/assets/fundoperfil.png" alt="teclado" id='img' />
         <div id='grid'>
           {[1, 2, 3].map((_, index) => (
             <div id='square' key={index}>
@@ -63,6 +63,11 @@ export function Loja_Perfil() {
             De uma forma geral, os tioalcoóis são utilizados em reservatórios de combustíveis gasosos, como o gás de cozinha, para que, se houver algum vazamento, nós consigamos perceber. Isso é feito porque esses compostos apresentam um cheiro repugnante. Aquele cheiro característico que
           </p>
         </div>
+      </section>
+      <section id='concertos'>
+          <div id='linetitle'>
+              <span id='line'><p>Concertos</p></span>
+          </div>
       </section>
 
       {/* Balão de chat */}

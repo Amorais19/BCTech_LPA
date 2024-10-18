@@ -17,11 +17,11 @@ export const Section = styled.section`
  }
 
  #img {
-   position: absolute;
-   width: 100%;
-   height: 40rem;
-   border-bottom: 1rem solid #5e8092;
-   filter: blur(3px);
+  position: absolute;
+  width: 100%;
+  height: 40rem;
+  opacity: 40%;
+  filter: blur(2px);
  }
 
  #grid {
@@ -71,7 +71,7 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   width: 55%;
-  height: 30rem;
+  height: 25rem;
   justify-content: center;
  }
 
@@ -99,9 +99,11 @@ export const Section = styled.section`
 
  #conteudo {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+  border-top: 2rem solid ${colors.roxoSecundario};
  }
 `;
 
