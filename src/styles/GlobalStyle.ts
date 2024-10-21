@@ -15,6 +15,9 @@ export const colors = {
   blackOpac: "#00000040",      // Preto com opacidade
   white: "#fff",                // Branco
   whiteOpac: "#ffffff90",       // Branco com opacidade
+  laranja:"#ff8300",            //laranja
+  laranjaEscuro: "#ff630a",      //laranja Escuro
+  laranjaOpac: "#ff630a60",
 
   // Tons de roxo
   roxoPrincipal: '#5836BB',     // Roxo Principal

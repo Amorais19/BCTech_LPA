@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# BCTech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ Esta é a documentação do projeto Business Computer Technology (**BCTech**)
 
-Currently, two official plugins are available:
+## 🫂 Colaboradores
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![GitHub](https://img.shields.io/badge/-Amorais19-000?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/Amorais19)
+[![GitHub](https://img.shields.io/badge/-naiynull-000?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/naiynull)
+[![GitHub](https://img.shields.io/badge/-luissothavioo-000?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/luissothavioo)
+[![GitHub](https://img.shields.io/badge/-lolaias-000?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/lolaias)
 
-## Expanding the ESLint configuration
+## 🎯 Objetivos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+ O nosso projeto visa integrar lojas locais e pessoas autônomas que ofereçam assistência técnica de manutenção de computadores.
 
-- Configure the top-level `parserOptions` property like this:
+## 💻 Versionamento
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+| Linguagem   | Versão       |
+| :---------- | :--------- | 
+| `React`      | `string` |
+| `JavaScript`      | `string` |

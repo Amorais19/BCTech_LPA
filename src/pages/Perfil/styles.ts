@@ -40,7 +40,7 @@ export const Section = styled.section`
         justify-content: center;
         align-items: center;
         border-radius: 6rem;
-        background-color: white;
+        background-color: ${colors.white};
     }
 
     #usuariog {
@@ -89,7 +89,7 @@ export const Section = styled.section`
     }
 
     h3 {
-        color: ${colors.white};
+        color: ${colors.laranjaEscuro};
         margin-bottom: 2rem;
         font-size: 1.5rem;
         font-family: 'Raleway';

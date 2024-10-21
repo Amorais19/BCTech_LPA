@@ -47,7 +47,7 @@ export const Section = styled.section`
 
   // Estilo do tópico
   #topico {
-    color: #5836BB; /* roxoPrincipal */
+    color: ${colors.laranjaEscuro}; /* roxoPrincipal */
     font-family: 'Raleway';
     font-style: italic;
     font-size: xx-large;
@@ -66,7 +66,7 @@ export const Section = styled.section`
   // Linha sob o título
   #line {
     width: 6.5rem;
-    border-bottom: solid 2px #5836BB; /* roxoPrincipal */
+    border-bottom: solid 2px ${colors.laranjaEscuro}; /* roxoPrincipal */
   }
 
   // Estilo da grade de funcionalidades

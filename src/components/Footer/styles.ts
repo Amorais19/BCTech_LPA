@@ -31,7 +31,7 @@ export const Footer = styled.aside`
 
     #title {
         font-family: 'Raleway';
-        color: ${colors.footerTitle};
+        color: ${colors.laranja};
     }
 
     #icons {

@@ -35,7 +35,7 @@ export const Section = styled.section`
   #title {
     font-family: 'Reem Kufi';
     font-size: 4em;
-    color: ${colors.white};
+    color: ${colors.laranjaEscuro};
   }
 
   #text {
@@ -82,18 +82,6 @@ export const Section = styled.section`
   #grid {
     display: grid;
     grid-template-columns: auto auto;
-  }
-
-  #square {
-    margin: 1rem;
-    width: 15rem;
-    height: 15rem;
-    background-color: ${colors.roxoOpac};
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   #mapa {

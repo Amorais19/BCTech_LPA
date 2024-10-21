@@ -32,7 +32,7 @@ export const Section = styled.section`
   }
 
   #topico {
-    color: #5836BB; /* roxoPrincipal */
+    color: ${colors.laranjaEscuro}; /* roxoPrincipal */
     font-family: 'Raleway';
     font-style: italic;
     font-size: xx-large;
@@ -48,7 +48,7 @@ export const Section = styled.section`
 
   #line {
     width: 6.5rem;
-    border-bottom: 1px solid ${colors.roxoPrincipal};
+    border-bottom: 1px solid ${colors.laranjaEscuro};
   }
 
   #title {

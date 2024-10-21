@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faComment } from '@fortawesome/free-solid-svg-icons';
 
 // Importando as imagens
-import phoneImg from '../../assets/phone.png'; // Substitua pelo caminho correto
-import whatsappImg from '../../assets/wpp.png'; // Substitua pelo caminho correto
-import emailImg from '../../assets/mail.png'; // Substitua pelo caminho correto
-import locationImg from '../../assets/loc.png'; // Substitua pelo caminho correto
+import phoneImg from '../../assets/phone.png'; 
+import whatsappImg from '../../assets/wpp.png'; 
+import emailImg from '../../assets/mail.png'; 
+import locationImg from '../../assets/loc.png'; 
 
 export function Contacte() {
   return (
@@ -18,22 +18,19 @@ export function Contacte() {
         `}
       </style>
 
-      {/* Seção de Header */}
       <section id='header'>
-        <img src="src/assets/teclado.png" alt="teclado" id='img' />
+        <img src="src/assets/teclado.png" alt="Teclado" id='img' />
         <div id="textos">
           <h2 id='title'>Contacte-nos</h2>
           <p id='text'>
-            Não deixe de nos contactar caso haja problemas.
-            Procuramos estar cientes de erros para fornecermos
+            Não deixe de nos contactar caso haja problemas. 
+            Procuramos estar cientes de erros para fornecermos 
             segurança e estabilidade em nossa plataforma.
           </p>
         </div>
       </section>
 
-      {/* Seção de Conteúdo */}
       <section id='conteudo'>
-        {/* Contatos */}
         <div id='contatos'>
           <div id='grid'>
             <ContactSquare label="Phone" info="0800-0800" imgSrc={phoneImg} />
@@ -44,14 +41,12 @@ export function Contacte() {
           <MapSection />
         </div>
 
-        {/* Suporte */}
         <SupportSection />
       </section>
     </S.Section>
   );
 }
 
-// Componente para cada quadrado de contato
 const ContactSquare = ({ label, info, imgSrc }) => (
   <div id="square">
     <img src={imgSrc} alt={label} id='image' />
@@ -60,7 +55,6 @@ const ContactSquare = ({ label, info, imgSrc }) => (
   </div>
 );
 
-// Seção do Mapa
 const MapSection = () => (
   <div id="mapa">
     <iframe
@@ -74,20 +68,18 @@ const MapSection = () => (
   </div>
 );
 
-// Seção de Suporte
 const SupportSection = () => (
   <div id='suporte'>
     <h3>SUPORTE</h3>
     <SupportField label="Nome" placeholder="Insira aqui seu nome" icon={faUser} />
     <SupportField label="E-mail" placeholder="Insira aqui seu e-mail" type="email" icon={faEnvelope} />
-    <SupportField label="Mensagem" placeholder="Mensagem..." type="mensagem" icon={faComment} />
+    <SupportField label="Mensagem" placeholder="Mensagem..." type="textarea" icon={faComment} />
     <div id="buttonDiv">
       <Button link="/" text="ENVIAR" />
     </div>
   </div>
 );
 
-// Campo de Suporte
 const SupportField = ({ label, placeholder, type = "text", icon }) => (
   <div id="campo">
     <label htmlFor={label.toLowerCase()} id="titulo">{label}</label>
@@ -98,7 +90,6 @@ const SupportField = ({ label, placeholder, type = "text", icon }) => (
   </div>
 );
 
-// Componente do Botão
 interface ButtonProps {
   link: string;
   text: string;

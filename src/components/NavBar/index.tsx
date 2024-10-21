@@ -14,31 +14,23 @@ export function NavBar() {
       <nav>
         <ul>
           <li>
-            <Link to="/">
-              <p style={{ color: location.pathname === "/" ? colors.white : colors.navBarTitle }}>
-                Home
-              </p>
+            <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+              <p>Home</p>
             </Link>
           </li>
           <li>
-            <Link to="/Lojas">
-              <p style={{ color: location.pathname === "/Lojas" ? colors.white : colors.navBarTitle }}>
-                Lojas
-              </p>
+            <Link to="/Lojas" className={location.pathname === "/Lojas" ? "active" : ""}>
+              <p>Lojas</p>
             </Link>
           </li>
           <li>
-            <Link to="/Perfil">
-              <p style={{ color: location.pathname === "/Perfil" ? colors.white : colors.navBarTitle }}>
-                Perfil
-              </p>
+            <Link to="/Perfil" className={location.pathname === "/Perfil" ? "active" : ""}>
+              <p>Perfil</p>
             </Link>
           </li>
           <li>
-            <Link to="/Contacte-nos">
-              <p style={{ color: location.pathname === "/Contacte-nos" ? colors.white : colors.navBarTitle }}>
-                Contacte-nos
-              </p>
+            <Link to="/Contacte-nos" className={location.pathname === "/Contacte-nos" ? "active" : ""}>
+              <p>Contacte-nos</p>
             </Link>
           </li>
         </ul>

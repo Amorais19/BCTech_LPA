@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../styles/GlobalStyle';
+import { colors, gradientes } from '../../styles/GlobalStyle';
 
 export const Section = styled.section`
  display: flex;
@@ -20,7 +20,7 @@ export const Section = styled.section`
    width: 100%;
    height: 40rem;
    opacity: 40%;
-   filter: blur(2px);
+   filter: blur(0px);
  }
 
  #grid {
@@ -43,31 +43,29 @@ export const Section = styled.section`
    flex-direction: column;
    height: 100%;
    padding: 1rem;
+   background: linear-gradient(${colors.roxoOpac}, ${colors.roxoOpac}, ${colors.laranjaOpac});
  }
 
  .align1 {
-   background-color: #540d90;
  }
 
  .align2 {
-   background-color: #2c909d;
  }
 
  .align3 {
-   background-color: #167e8b;
  }
 
  .title {
    font-family: 'Raleway';
    font-size: x-large;
    text-transform: uppercase;
-   color: #fff;
+   color: ${colors.white};;
  }
 
  .text {
    font-family: 'Raleway';
    padding: 1rem;
-   color: #fff;
+   color: ${colors.white};;
  }
 
  #sinopse {
@@ -83,7 +81,7 @@ export const Section = styled.section`
    font-family: 'Raleway';
    font-size: 3rem;
    text-transform: uppercase;
-   color: #ffffff;
+   color:${colors.white};
  }
 
  .subtitle {
@@ -107,7 +105,7 @@ export const Section = styled.section`
    align-items: center;
    justify-content: center;
    width: 100%;
-   border-top: 2rem solid #5c4b8a;
+   border-top: 1rem solid ${colors.laranjaEscuro};
  }
 
  .linha {
@@ -134,6 +132,241 @@ hr {
     }
 }
 
+
+//serviços
+#grid2 {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+.servico {
+  display: flex;
+  align-items: center; /* Alinha verticalmente o conteúdo */
+  margin: 1rem; /* Espaçamento entre os itens */
+  width: 100%; /* Largura adaptável */
+  background: rgba(255, 255, 255, 0.8); /* Fundo leve para destaque */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 1rem; /* Espaçamento interno */
+}
+
+.servico img {
+  margin-right: 1.5rem; /* Espaço entre a imagem e o texto */
+  width: 60px; /* Ajuste a largura da imagem conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.text1 {
+  margin-right: 1.5rem; /* Espaço entre o texto e o botão */
+  color: ${colors.white}; /* Cor do texto */
+  flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+#buttonDiv {
+  padding-top: 0.5rem;
+  margin-left: auto; /* Empurra o botão para a direita */
+}
+.bb {
+  background-color: ${colors.roxoPrincipal};
+  border-radius: 10px;
+  transition: background-color 300ms, transform 300ms;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem; /* Largura do botão */
+  height: 2rem; /* Altura do botão */
+  color: ${colors.white};
+  font-family: 'Raleway';
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0;
+}
+
+.bb:hover {
+  background-color: ${colors.roxoSecundario};
+  transform: scale(1.05);
+}
+
+//contato
+.contact-background {
+  background-color: ${colors.roxoSecundario}; /* Fundo claro */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 2rem; /* Aumenta o espaçamento ao redor do conteúdo */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  display: flex; /* Alinha os itens */
+  flex-direction: column; /* Empilha os itens verticalmente */
+  align-items: center; /* Centraliza os itens */
+  width: 300px; /* Largura fixa */
+  height: 200px; /* Altura fixa */
+  text-align: center;
+
+}
+.contact-background:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+
+.contact-background p {
+  color: white; /* Garante que o texto dentro seja branco */
+}
+
+
+
+#grid3 {
+  display: grid;
+  grid-template-columns: repeat(2, 6fr); /* Duas colunas */
+  gap: 20rem; /* Espaço entre os itens da grade */
+  padding: 2rem; /* Espaçamento ao redor da grade */
+}
+
+
+
+
+
+  /* Estilo do Conteúdo */
+  #conteudo2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #contatos {
+    padding: 2rem 0;
+  }
+
+/* Estilização do pop-up */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+  background-color: ${colors.white}; /* Fundo branco */
+  border-radius: 12px;
+  padding: 40px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  animation: scaleUp 0.3s ease;
+  text-align: center;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between; /* Distribui os botões */
+  margin-top: 20px;
+}
+
+#botaoCancel {
+  background: ${colors.laranja}; /* Cor laranja */
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 20px;
+  width: 48%; /* Largura ajustada para dividir espaço */
+}
+
+#botaoCancel:hover {
+  background: ${colors.laranjaEscuro}; /* Laranja escuro */
+  transform: scale(1.05);
+}
+
+.solicitar-servico-button {
+  background: ${colors.roxoPrincipal}; /* Cor roxo principal */
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 20px;
+  width: 48%; /* Largura ajustada para dividir espaço */
+}
+
+.solicitar-servico-button:hover {
+  background: ${colors.roxoSecundario}; /* Altera para o roxo secundário ao passar o mouse */
+  transform: scale(1.05);
+}
+
+/* Animação de exibição */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Estilização dos detalhes do concerto */
+.concert-details {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.concert-details h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: ${colors.roxoPrincipal}; /* Azul */
+  border-bottom: 2px solid ${colors.roxoOpac}; /* Linha abaixo do título */
+  padding-bottom: 10px;
+}
+
+.details-container {
+  text-align: left; /* Alinhamento à esquerda para melhor legibilidade */
+  line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+.concert-details p {
+  margin: 8px 0;
+  font-size: 1em;
+}
+
+.concert-details span {
+  display: block; /* Para deixar as informações mais destacadas */
+  margin-top: 5px; /* Espaçamento entre as linhas */
+  color: #495057; /* Cinza escuro */
+  font-weight: 500; /* Aumentar o peso da fonte para destaque */
+}
+
+/* Adicione ícones aos detalhes, se possível */
+.concert-details i {
+  color: #007bff; /* Cor do ícone */
+  margin-right: 10px;
+}
+
+
+
+
+//chat bot
  .stylish-chat-container {
    display: flex;
    align-items: center;
@@ -165,7 +398,7 @@ hr {
   position: fixed;
   bottom: 5%; /* Distância do fundo */
   right: 5%; /* Distância da direita */
-  width: 370px; /* Largura fixa */
+  width: 350px; /* Largura fixa */
   max-width: 90%; /* Para telas menores */
   height: 400px; /* Altura fixa */
   max-height: 80vh; /* Altura máxima proporcional */
@@ -173,7 +406,7 @@ hr {
   flex-direction: column;
   z-index: 1001;
   animation: fade-in 0.3s ease;
-  border-radius: 20px;
+  border-radius: 35px;
   overflow: hidden;
 }
 
@@ -187,7 +420,7 @@ hr {
   padding: 10px;
   flex-grow: 1;
   overflow-y: auto;
-  background: linear-gradient(to bottom, #838c86, #454545);
+  background: linear-gradient(to bottom, #555555 , #757575);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -197,23 +430,25 @@ hr {
   display: flex;
   align-items: center;
   margin: 1rem 0.5rem;
-  background-color: #333; /* Cor válida */
+  background-color: gray; /* Cor válida */
   border-radius: 30px;
   padding: 0.5rem;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 
 .header-question p {
   font-family: 'Raleway';
+  font-weight: 500;
   padding-left: 0.5rem;
+  color: ${colors.white};
 }
 
 .mascot-image {
   width: 10%; /* Proporcional */
   max-width: 40px; /* Largura máxima */
   height: auto;
-  background-color: #808080;
+  background-color: #606060;
   border-radius: 20px;
 }
 
@@ -243,7 +478,7 @@ hr {
 
 .send-button {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #ffffff;
+  color: ${colors.white};
   border: none;
   border-radius: 20px;
   padding: 10px 15px;
@@ -267,7 +502,7 @@ hr {
    height: 60px;
    border-radius: 50%;
    margin-right: 15px;
-   border: 2px solid #ffffff;
+   border: 2px solid ${colors.white};
  }
 
  .chat-message {
@@ -282,27 +517,31 @@ hr {
  }
  .bot {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Colunas responsivas */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); /* Colunas responsivas */
+  column-gap: 2px; /* Espaçamento entre as colunas */
+  row-gap: 10px; /* Espaçamento entre as linhas */
   margin: 20px 0;
   justify-items: center;
 }
+
+
 .bot-button {
   width: 90%; /* Largura proporcional */
-  background-color: #339999;
-  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  color: ${colors.black};;
   border: none;
-  border-radius: 15px;
-  padding: 8px 12px;
+  border-radius: 25px;
+  padding: 8px 8px;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
   font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  text-align: center;
+  font-size: smaller;
+  font-weight: 500;
+  text-align: start;
 }
 
 .bot-button:hover {
-  background-color: #167e8b;
+  background: linear-gradient(to right, ${colors.laranja}, #FE5625);
   transform: scale(1.05);
 }
 `;
