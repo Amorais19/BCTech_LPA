@@ -70,16 +70,16 @@ export const Section = styled.section`
     /* Texto */
     h3 {
         color: ${colors.white};
-        font-weight: bolder;
         margin-bottom: 2rem;
         font-size: 1.5rem;
+        font-family: 'Raleway';
     }
 
     p {
         color: ${colors.white};
         margin-left: 1rem;
         font-family: 'Raleway';
-        font-weight: bold;
+        font-size: large;
     }
 
     h2 {
@@ -94,6 +94,9 @@ export const Section = styled.section`
         display: flex;
         justify-content: start;
         padding: 0 0 0.2rem 0.5rem;
+        font-family: 'Raleway';
+        font-weight: bold;
+        font-size: large;
     }
 
     /* Campos */

@@ -85,14 +85,14 @@ export const Section = styled.section`
         color: ${colors.white};
         margin-left: 1rem;
         font-family: 'Raleway';
-        font-weight: bold;
+        font-size: large;
     }
 
     h3 {
         color: ${colors.white};
-        font-weight: bolder;
         margin-bottom: 2rem;
         font-size: 1.5rem;
+        font-family: 'Raleway';
     }
 
     h2 {

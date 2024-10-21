@@ -32,7 +32,8 @@ export const Section = styled.section`
     justify-content: end;
     padding: 1rem;
     width: 75rem;
-    color: white
+    color: white;
+    font-family: 'Raleway';
   }
 
   #layout {
@@ -133,7 +134,7 @@ export const Section = styled.section`
 
   /* Imagens */
   img {
-    width: 5rem;
+    width: 4rem;
   }
 
   #icon {

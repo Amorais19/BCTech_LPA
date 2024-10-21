@@ -31,7 +31,8 @@ export const Section = styled.section`
         justify-content: end;
         padding: 1rem;
         width: 75rem;
-        color: white
+        color: white;
+        font-family: 'Raleway';
     }
 
     /* Estilo do Cabeçalho */
@@ -44,7 +45,7 @@ export const Section = styled.section`
 
     /* Estilo da Imagem */
     img {
-        width: 5rem;
+        width: 4rem;
     }
 
     #icon {

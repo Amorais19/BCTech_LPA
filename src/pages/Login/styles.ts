@@ -44,7 +44,8 @@ export const Section = styled.section`
       justify-content: end;
       padding: 1rem;
       width: 53rem;
-      color: white
+      color: white;
+      font-family: 'Raleway';
   }
 
   /* Texto */
@@ -108,7 +109,7 @@ export const Section = styled.section`
   }
 
   img {
-    width: 5rem;
+    width: 4rem;
   }
 
   /* Botões */

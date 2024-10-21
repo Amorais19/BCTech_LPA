@@ -43,7 +43,7 @@ export function Perfil() {
             </div>
             <div id='campo'>
               <img src="src/assets/senhaIcone.png" alt="senha" id="icones" />
-              <p>..........</p>
+              <p>**********</p>
             </div>
           </div>
 
