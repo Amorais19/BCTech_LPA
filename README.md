@@ -5,13 +5,13 @@
 ## 🫂 Colaboradores
 
 [![GitHub](https://img.shields.io/badge/-Amorais19-000?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/Amorais19)
-[![GitHub](https://img.shields.io/badge/-naiynull-000?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/naiynull)
-[![GitHub](https://img.shields.io/badge/-luissothavioo-000?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/luissothavioo)
-[![GitHub](https://img.shields.io/badge/-lolaias-000?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/lolaias)
+[![GitHub](https://img.shields.io/badge/-lolaias-529?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/lolaias)
+[![GitHub](https://img.shields.io/badge/-luissothavioo-ff690a?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/luissothavioo)
+[![GitHub](https://img.shields.io/badge/-naiynull-fff?style=for-the-badge&logo=github&logoColor=FFF)](https://github.com/naiynull)
 
 ## 🎯 Objetivos
 
- O nosso projeto visa integrar lojas locais e pessoas autônomas que ofereçam assistência técnica de manutenção de computadores.
+O projeto visa otimizar a assistência técnica em Varginha ao integrar e unificar serviços de manutenção computacional locais, aumentando a eficiência na localização e divulgação desses serviços, oferecendo suporte eficaz e também proporcionando visibilidade para técnicos autônomos.
 
 ## 💻 Versionamento
 
