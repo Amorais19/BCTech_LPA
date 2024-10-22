@@ -1,4 +1,4 @@
-# BCTech
+# BCTech <img src="src/assets/logo.png" alt="Logo da Minha Empresa">
 
  Esta é a documentação do projeto Business Computer Technology (**BCTech**)
 
