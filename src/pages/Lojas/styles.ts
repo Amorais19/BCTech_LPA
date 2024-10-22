@@ -15,7 +15,6 @@ export const Section = styled.section`
   /* Carrossel */
   #carrossel {
     width: 100%;
-    margin-top: 2rem;
   }
 
   #img {
@@ -28,7 +27,6 @@ export const Section = styled.section`
   #lojas {
     width: 100%;
     padding: 2rem 0; /* Remover padding lateral */
-    margin-top: 2rem;
   }
 
   #topico {
@@ -58,14 +56,17 @@ export const Section = styled.section`
   }
 
   h2 {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-style: italic;
+
   }
 
   p {
-    font-size: 0.9rem;
-    margin: 0.5rem 0 1rem 0;
+    font-family: 'Raleway';
+    font-size: medium;
     color: ${colors.navBarTitle};
+    padding: 1rem 0;
   }
 
   /* Loja */
@@ -96,7 +97,6 @@ export const Section = styled.section`
     max-height: 200px; /* Define uma altura máxima para as imagens */
     object-fit: cover; /* Ajusta a imagem para preencher o espaço */
     margin-bottom: 1rem;
-    border-radius: 8px;
   }
 
   .stars {
@@ -107,6 +107,5 @@ export const Section = styled.section`
 
   .star {
     font-size: 1rem;
-    color: yellow;
   }
 `;

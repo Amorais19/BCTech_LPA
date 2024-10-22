@@ -96,9 +96,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ link, text }) => (
-  <li>
-    <a href={link} id="center">
+    <a href={link} id="button">
       {text}
     </a>
-  </li>
 );

@@ -15,7 +15,7 @@ export function Lojas() {
 
   const lojasArray = Array.from({ length: 12 }, (_, index) => ({
     id: index,
-    nome: `Loja ${index + 1}`,
+    nome: `Nome da Empresa ${index + 1}`,
     descricao: 'Texto referente à empresa. Texto bem minimalista feito pela empresa.',
     imgSrc: 'src/assets/empresas.png',
     estrelas: 5,

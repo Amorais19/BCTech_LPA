@@ -53,9 +53,9 @@ export function Loja_Perfil() {
   ];
 
   const squaresservico: Service[] = [
-    { imgSrc: 'src/assets/empresas.png', text: 'Serviço 1: Manutenção de Equipamento', technician: 'João Silva', estimatedTime: '1 hora', description: 'Verificação e manutenção de equipamentos eletrônicos, garantindo que tudo funcione perfeitamente.', price: 'R$ 100,00' },
-    { imgSrc: 'src/assets/empresas.png', text: 'Serviço 2: Limpeza de Equipamentos', technician: 'Maria Oliveira', estimatedTime: '30 minutos', description: 'Limpeza interna e externa de aparelhos, removendo poeira e sujeira acumulada.', price: 'R$ 50,00' },
-    { imgSrc: 'src/assets/empresas.png', text: 'Serviço 3: Instalação de Equipamentos', technician: 'Carlos Santos', estimatedTime: '2 horas', description: 'Instalação de novos aparelhos com testes completos, garantindo que tudo esteja em perfeito estado.', price: 'R$ 200,00' },
+    { imgSrc: 'src/assets/empresas.png', text: 'Serviço 1: Manutenção de Equipamento', technician: 'Silvio Carmaro', estimatedTime: '1 hora', description: 'Verificação e manutenção de equipamentos eletrônicos, garantindo que tudo funcione perfeitamente.', price: 'R$ 100,00' },
+    { imgSrc: 'src/assets/empresas.png', text: 'Serviço 2: Limpeza de Equipamentos', technician: 'Lúcia Mavieira', estimatedTime: '30 minutos', description: 'Limpeza interna e externa de aparelhos, removendo poeira e sujeira acumulada.', price: 'R$ 50,00' },
+    { imgSrc: 'src/assets/empresas.png', text: 'Serviço 3: Instalação de Equipamentos', technician: 'José Leando', estimatedTime: '2 horas', description: 'Instalação de novos aparelhos com testes completos, garantindo que tudo esteja em perfeito estado.', price: 'R$ 200,00' },
   ];
 
   return (

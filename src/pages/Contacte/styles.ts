@@ -168,26 +168,14 @@ export const Section = styled.section`
     gap: 3rem;
   }
 
-  li {
-    list-style: none;
-    background-color: ${colors.roxoPrincipal};
-    border-radius: 40px;
-    transition: background-color 300ms, transform 300ms;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 25rem;
-    height: 4rem;
-    text-align: center;
-  }
-
-  li a {
-    color: ${colors.white};
+  #button {
     font-family: 'Raleway';
-    font-size: large;
     font-weight: bold;
     text-decoration: none;
-    display: inline-block;
+    color: ${colors.white};
+    background-color: ${colors.roxoPrincipal};
+    padding: 1rem 15rem;
+    border-radius: 30px;
   }
 
 /* Estilo do Componente ContactSquare */

@@ -46,15 +46,6 @@ export const Section = styled.section`
    background: linear-gradient(${colors.roxoOpac}, ${colors.roxoOpac}, ${colors.laranjaOpac});
  }
 
- .align1 {
- }
-
- .align2 {
- }
-
- .align3 {
- }
-
  .title {
    font-family: 'Raleway';
    font-size: x-large;
