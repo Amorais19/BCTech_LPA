@@ -40,7 +40,6 @@ export function Contacte() {
           </div>
           <MapSection />
         </div>
-
         <SupportSection />
       </section>
     </S.Section>
@@ -70,7 +69,7 @@ const MapSection = () => (
 
 const SupportSection = () => (
   <div id='suporte'>
-    <h3>SUPORTE</h3>
+    <h3 id='titlesuporte'>SUPORTE</h3>
     <SupportField label="Nome" placeholder="Insira aqui seu nome" icon={faUser} />
     <SupportField label="E-mail" placeholder="Insira aqui seu e-mail" type="email" icon={faEnvelope} />
     <SupportField label="Mensagem" placeholder="Mensagem..." type="textarea" icon={faComment} />

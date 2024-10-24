@@ -17,7 +17,7 @@ export function Home() {
 
       {/* Seção de Funcionalidades */}
       <section id='funcionalidades'>
-        <div>
+        <div id="textinho">
           <p id='topico'>Explore nossas</p>
           <h1>FUNCIONALIDADES <span id='line'></span></h1>
         </div>

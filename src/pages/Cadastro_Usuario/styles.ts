@@ -23,6 +23,7 @@ export const Section = styled.section`
         display: flex;
         align-items: center;
         width: 75rem;
+        margin-bottom: 2rem; /* Espaço abaixo da seção align */
     }
 
     #link {
@@ -33,6 +34,7 @@ export const Section = styled.section`
         width: 75rem;
         color: white;
         font-family: 'Raleway';
+        margin-bottom: 2rem; /* Espaço abaixo do link */
     }
 
     /* Estilo do Cabeçalho */
@@ -41,6 +43,7 @@ export const Section = styled.section`
         font-weight: bold;
         font-size: 4rem;
         font-family: 'Reem Kufi';
+        margin-bottom: 2rem; /* Espaço abaixo do cabeçalho */
     }
 
     /* Estilo da Imagem */
@@ -49,12 +52,12 @@ export const Section = styled.section`
     }
 
     #icon {
-        position: absolute; /* Coloca o ícone dentro do campo de input */
-        left: 1rem; /* Ajuste a posição do ícone */
+        position: absolute;
+        left: 1rem;
         top: 50%;
-        transform: translateY(-50%); /* Centraliza verticalmente */
-        color: white; /* Muda a cor do ícone para branco */
-        font-size: 1.2rem; /* Tamanho do ícone */
+        transform: translateY(-50%);
+        color: white;
+        font-size: 1.2rem;
     }
 
     /* Estilo do Formulário */
@@ -68,6 +71,7 @@ export const Section = styled.section`
         align-items: center;
         justify-content: space-evenly;
         border: 0.2rem solid ${colors.roxoPrincipal};
+        margin-bottom: 2rem; /* Espaço abaixo do formulário */
     }
 
     /* Estilo dos Campos */
@@ -85,20 +89,21 @@ export const Section = styled.section`
     #campoE {
         width: 65rem;
     }
+
     #input {
         background-color: ${colors.blackFundo};
-        padding: 1rem 1rem 1rem 3rem; /* Espaço interno para ícone */
+        padding: 1rem 1rem 1rem 3rem;
         border: 1px solid ${colors.roxoPrincipal};
         font-size: medium;
         border-radius: 10px;
         color: ${colors.whiteOpac};
-        width: 100%; /* Para garantir que o input ocupe toda a largura */
-        min-height: 3.5rem; /* Altura mínima do input */
-        transition: border-color 200ms; /* Transição suave na borda */
+        width: 100%;
+        min-height: 3.5rem;
+        transition: border-color 200ms;
     }
 
     #inputContainer {
-        position: relative; /* Para permitir posicionamento absoluto do ícone */
+        position: relative;
     }
 
     /* Estilo do Título do Campo */
@@ -113,7 +118,11 @@ export const Section = styled.section`
     /* Botões */
     #buttonDiv {
         display: flex;
-        gap: 3rem;
+        gap: 2rem; /* Espaçamento entre botões */
+        justify-content: center; /* Centraliza os botões */
+        flex-wrap: wrap; /* Permite quebra em novas linhas se necessário */
+        margin-top: 1rem; /* Espaço acima dos botões */
+        margin-bottom: 2rem; /* Espaço abaixo dos botões */
     }
 
     li {
@@ -121,12 +130,13 @@ export const Section = styled.section`
         background-color: ${colors.blackFundo};
         border-radius: 12px;
         transition: background-color 300ms, transform 300ms;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        width: 12rem;
-        height: 3rem;
+        width: 12rem; /* Largura dos botões */
+        height: 3rem; /* Altura dos botões */
         text-align: center;
+        cursor: pointer; /* Mão ao passar o mouse */
     }
 
     li a {
@@ -136,6 +146,7 @@ export const Section = styled.section`
         font-weight: bold;
         text-decoration: none;
         display: inline-block;
+        width: 100%; /* Link ocupa toda a área do botão */
     }
 
     li:hover {
@@ -153,4 +164,78 @@ export const Section = styled.section`
         display: flex;
         gap: 3rem;
     }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 1225px) {
+        #background {
+            height: calc(100vh - 10rem);
+        }
+
+        .align {
+            width: 90%;
+        }
+
+        #link {
+            width: 90%;
+        }
+
+        #formulario {
+            width: 90%;
+            height: auto; /* Permitir altura flexível */
+        }
+
+        #campo,
+        #campoE {
+            width: 100%; /* Campos ocupam toda a largura */
+        }
+
+        h1 {
+            font-size: 3rem; /* Diminuir tamanho da fonte */
+        }
+
+        #buttonDiv {
+            gap: 1rem; /* Reduzir espaço entre botões */
+            flex-direction: row; /* Manter botões lado a lado */
+        }
+
+        li {
+            width: 10rem; /* Ajustar a largura dos botões em telas menores */
+            height: 3rem; /* Altura do botão */
+        }
+        #link{
+            display: flex;
+        align-items: center;
+        justify-content: end;
+        padding: 0.1;
+        width: 65rem;
+        color: white;
+        font-family: 'Raleway';
+        margin-bottom: 1rem; /* Espaço abaixo do link */
+        }
+    }
+     @media (max-width: 1211px) {
+        #link{
+            display: flex;
+        align-items: center;
+        justify-content: end;
+        padding: 0.1;
+        width: 55rem;
+        color: white;
+        font-family: 'Raleway';
+        margin-bottom: 1rem; /* Espaço abaixo do link */
+        }
+     }
+     @media (max-width: 931px) {
+        #link{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding: 0.1;
+        width: 40rem;
+        color: white;
+        font-family: 'Raleway';
+        margin-bottom: 1rem; /* Espaço abaixo do link */
+        }
+     }
+    
 `;

@@ -6,7 +6,6 @@ export const Section = styled.section`
   align-items: center;
   justify-content: center;
 
-  // Estilo da seção linear com gradiente animado
   .linear {
     background: linear-gradient(300deg, 
       rgba(36, 24, 155, 0.3) 0%, 
@@ -25,7 +24,6 @@ export const Section = styled.section`
     justify-content: center;
   }
 
-  // Animação do gradiente
   @keyframes gradient {
     0% {
       background-position: 0% 0%;
@@ -38,45 +36,42 @@ export const Section = styled.section`
     }
   }
 
-  // Estilo para a seção de funcionalidades
   #funcionalidades {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
 
-  // Estilo do tópico
   #topico {
     color: ${colors.laranjaEscuro}; /* roxoPrincipal */
     font-family: 'Raleway';
     font-style: italic;
     font-size: xx-large;
     padding: 0.5rem 0;
+    width: 100%; /* Garante que ocupe toda a largura */
+    text-align: center; /* Centraliza o texto */
   }
 
-  // Estilo do título
   h1 {
     display: flex;
     flex-direction: column;
     color: ${colors.white};
     font-family: 'Reem Kufi';
     font-size: xx-large;
+    text-align: center; /* Centraliza o texto */
   }
 
-  // Linha sob o título
   #line {
     width: 6.5rem;
     border-bottom: solid 2px ${colors.laranjaEscuro}; /* roxoPrincipal */
   }
 
-  // Estilo da grade de funcionalidades
   #funcao {
     display: grid;
     grid-template-columns: auto auto;
     margin: 2rem;
   }
 
-  // Estilos para os cards de funcionalidades
   #centerO,
   #centerT {
     display: flex;
@@ -97,26 +92,22 @@ export const Section = styled.section`
     background: linear-gradient(${colors.black}, ${gradientes.greyO}, ${gradientes.greyT});
   }
 
-  // Efeitos de hover nos cards
   #centerO:hover,
   #centerT:hover {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     background: linear-gradient(${colors.black}, ${gradientes.blackT}, ${gradientes.blackO});
   }
 
-  // Estilo para os subtítulos
   h4 {
     color: #5836BB; /* roxoPrincipal */
     font-family: 'Reem Kufi';
   }
 
-  // Estilo da imagem nos cards
   #img {
     width: 70px;
     height: 70px;
   }
 
-  // Estilo do texto nos cards
   #text {
     display: flex;
     font-family: 'Raleway';
@@ -126,7 +117,6 @@ export const Section = styled.section`
     text-align: center;
   }
 
-  // Estilo da seção sobre
   #sobre {
     background: linear-gradient(${gradientes.purpleO}, ${gradientes.purpleT});
     display: flex;
@@ -135,19 +125,16 @@ export const Section = styled.section`
     padding: 3rem;
   }
 
-  // Largura da div interna da seção sobre
   #width {
     flex-direction: column;
     width: 40rem;
   }
 
-  // Estilo da imagem da mulher
   #mulher {
     width: 500px;
     height: 350px;
   }
 
-  // Estilo do texto na seção sobre
   #texto {
     color: ${colors.white};
     font-family: 'Raleway';
@@ -155,20 +142,13 @@ export const Section = styled.section`
     padding: 1.5rem 0;
   }
 
-  // Estilo do contêiner dos botões
   #botao {
     display: flex;
     justify-content: space-evenly;
     margin-left: -4rem;
     margin-top: 2rem;
   }
-  #botaoL {
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: -4rem;
-  }
 
-  // Estilo dos itens da lista de botões
   li {
     list-style: none;
     background: linear-gradient(${gradientes.purpleButtonO}, ${gradientes.purpleButtonT});
@@ -179,7 +159,6 @@ export const Section = styled.section`
     padding: 0.5rem 1rem; 
   }
 
-  // Estilo do link dentro dos botões
   li a {
     color: ${colors.white};
     font-family: 'Raleway';
@@ -189,13 +168,11 @@ export const Section = styled.section`
     text-align: center; 
   }
 
-  // Efeitos de hover nos botões
   li:hover {
     background-color: ${colors.roxoOpac};
     transform: scale(1.05); 
   }
 
-  // Estilo da seção de depoimentos
   #depoimentos {
     display: flex;
     flex-direction: column;
@@ -205,7 +182,6 @@ export const Section = styled.section`
     color: ${colors.black};
   }
 
-  // Animação dos depoimentos
   @keyframes float {
     0% {
         transform: translateY(0);
@@ -218,7 +194,6 @@ export const Section = styled.section`
     }
   }
 
-  // Estilização da div onde está o container
   #depoimentoContainer {
       display: flex;
       align-items: center;
@@ -228,7 +203,6 @@ export const Section = styled.section`
       height: 100%;
   }
 
-  // Estilização dos depoimentos
   .testimonial {
       display: flex;
       flex-direction: column;
@@ -246,7 +220,6 @@ export const Section = styled.section`
       animation: float 3s ease-in-out infinite; /* Adiciona a animação */
   }
 
-  // Estilo da imagem do perfil
   .profileImage {
     border-radius: 50%;
     width: 60px;
@@ -258,12 +231,7 @@ export const Section = styled.section`
     height: 30rem;
   }
 
-
-
-
-
   @media (max-width: 1350px) {
-  // Estilização da div onde está o container
     #depoimentoContainer {
         display: flex;
         align-items: center;
@@ -274,26 +242,10 @@ export const Section = styled.section`
     }
   }
 
-  @media (max-width: 1170px) {
-  // Estilização da div onde está o container
-    #depoimentoContainer {
-        width: 80%;
-    }
-  }
-
-  @media (max-width: 1130px) {
-  // Estilização da div onde está o container
-    #depoimentoContainer {
-        width: 90%;
-    }
-
-    #texto {
-      width: 80%;
-    }
-
-    #botao {
-      width: 90%;
-      gap: 1rem;
+  @media (max-width: 1020px) {
+    #mulher {
+      width: 400px;
+      height: 250px;
     }
   }
 
@@ -318,7 +270,6 @@ export const Section = styled.section`
       gap: 1rem;
     }
 
-    // Estilização dos depoimentos
     .testimonial {
       display: flex;
       flex-direction: column;
@@ -360,7 +311,6 @@ export const Section = styled.section`
       padding: 3rem 0rem 3rem 0rem;
     }
     
-    // Estilização da div onde está o container
     #depoimentoContainer {
         display: flex;
         align-items: center;
@@ -370,7 +320,6 @@ export const Section = styled.section`
         height: 100%;
     }
 
-    // Estilização dos depoimentos
     .testimonial {
         display: flex;
         flex-direction: column;
@@ -394,80 +343,92 @@ export const Section = styled.section`
       gap: 1rem;
     }
 
+    #depoimentoContainer {
+      width: 90%; /* Ajusta a largura para dispositivos menores */
+    }
   }
 
-  @media (max-width: 600px) {
-    // Estilização da div onde está o container
+  @media (max-width: 660px) {
     #depoimentoContainer {
         display: grid;
         grid-template-columns: auto;
         margin: 2rem;
         padding: 2rem;
-        width: 70%;
+        width: 90%; /* Garante que não saia da tela */
         height: 100%;
     }
 
-    // Estilização dos depoimentos
     .testimonial {
-        display: flex;
-        flex-direction: column;
-        height: 12rem;
-        margin: 1rem;
-        font-size: medium;
+      display: flex;
+      flex-direction: column;
+      height: 12rem;
+      margin: 1rem;
+      font-size: medium;
+    }
+
+    #funcionalidades {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #mulher {
+      display: none;
+    }
+
+    #textinho {
+      width: 30rem;
+    }
+
+    #width {
+      display: flex;
+      align-items: center;
+    }
+
+    #botao {
+      gap: 2rem
     }
   }
 
   @media (max-width: 490px) {
-    // Estilo do título
+    #funcao {
+      display: grid;
+      grid-template-columns: auto;
+    }
+
+    #textinho {
+      width: 320px;
+    }
+
+    #width {
+      display: flex;
+      align-items: center;
+    }
+
     h1 {
       display: flex;
       flex-direction: column;
       color: ${colors.white};
       font-family: 'Reem Kufi';
       font-size: x-large;
+      text-align: center;
     }
     
-    // Estilização da div onde está o container
     #depoimentoContainer {
         display: grid;
         grid-template-columns: auto;
         padding: 2rem;
-        width: 80%;
+        width: 90%;
     }
 
-    // Estilização dos depoimentos
     .testimonial {
         display: flex;
         flex-direction: column;
         height: 14rem;
-        margin: 1rem;
-        font-size: medium;
-    }
-  }
-
-  @media (max-width: 490px) {
-    h1 {
-      display: flex;
-      flex-direction: column;
-      color: ${colors.white};
-      font-family: 'Reem Kufi';
-      font-size: large;
-    }
-    // Estilização da div onde está o container
-    #depoimentoContainer {
-        display: grid;
-        grid-template-columns: auto;
-        padding: 2rem;
-        width: 80%;
-    }
-
-    // Estilização dos depoimentos
-    .testimonial {
-        display: flex;
-        flex-direction: column;
-        height: 16rem;
-        margin: 1rem;
-        font-size: medium;
-    }
+        margin: 0rem 0rem 1rem 0rem;
+        font-size: small;
+        animation: float 3s ease-in-out infinite;
+      }
   }
 `;
+

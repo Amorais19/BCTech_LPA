@@ -63,19 +63,22 @@ export const Section = styled.section`
         display: flex;
         justify-content: space-around;
         gap: 5rem;
+        flex-wrap: wrap;
     }
 
     #coluna {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        flex: 1;
     }
 
     #campo {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        width: 18rem;
+        width: 100%;
+        max-width: 18rem;
         padding: 1rem;
         border-bottom: 0.1rem solid ${colors.white};
     }
@@ -110,6 +113,7 @@ export const Section = styled.section`
         gap: 1rem;
         margin: 2rem 0 3rem 0;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     button {
@@ -160,13 +164,15 @@ export const Section = styled.section`
     .popup-content {
         background: ${colors.grayFundo};
         border-radius: 2rem;
-        width: 25rem;
-        height: 30rem;
-        padding: 30px 30px 0px 30px;
+        width: 90%;
+        max-width: 25rem;
+        height: auto;
+        padding: 30px;
     }
 
     #campoPop {
-        width: 20rem;
+        width: 100%;
+        max-width: 20rem;
         padding: 1rem;
     }
 
@@ -179,7 +185,7 @@ export const Section = styled.section`
         padding: 0.7rem;
         font-size: medium;
         border-radius: 30px;
-        width: 20rem;
+        width: 100%;
         filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 25%));
     }
 
@@ -194,5 +200,38 @@ export const Section = styled.section`
 
     .blur {
         filter: blur(5px);
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        #body {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #buttonDiv {
+            flex-direction: row; /* Mantém os botões lado a lado */
+            align-items: center;
+            justify-content: space-around; /* Espaça os botões */
+          
+        }
+
+        h2 {
+            font-size: 1.25rem; 
+        }
+
+        h3 {
+            font-size: 1.25rem; 
+        }
+
+        p {
+            font-size: medium; 
+        }
+
+        button {
+            width: 20rem; /* Largura automática */
+            max-width: 9rem; 
+            font-size: 14px; /* Tamanho do texto do botão diminuído */
+        }
     }
 `;

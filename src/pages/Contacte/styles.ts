@@ -104,15 +104,16 @@ export const Section = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 120%;
+    width: 100%;
     height: 90%;
     border-radius: 20px;
   }
 
-  h3 {
+  #titlesuporte {
     font-family: 'Reem Kufi';
     font-size: 60px;
     color: ${colors.white};
+    padding: 0 10rem;
   }
 
   #campo {
@@ -174,7 +175,7 @@ export const Section = styled.section`
     text-decoration: none;
     color: ${colors.white};
     background-color: ${colors.roxoPrincipal};
-    padding: 1rem 15rem;
+    padding: 1rem 13.5rem;
     border-radius: 30px;
   }
 
@@ -211,4 +212,98 @@ export const Section = styled.section`
   padding-top: 0.5rem;
   text-align: center;
 }
+
+@media (max-width: 1240px) {
+  #conteudo {
+  display: flex; /* Usar flexbox para melhor controle */
+  flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
+  align-items: center; /* Centraliza os itens */
+  padding: 2rem; /* Adiciona espaçamento */
+}
+
+#contatos {
+  display: flex; /* Mantém o layout flexível */
+  flex-direction: column; /* Empilha os elementos em coluna em telas menores */
+  align-items: center; /* Centraliza os itens */
+  width: 100%; /* Garante que ocupe toda a largura disponível */
+}
+
+#grid {
+  display: grid; /* Continua usando grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta para múltiplas colunas com um mínimo de 200px */
+  gap: 1rem; /* Espaçamento entre os itens */
+  width: 100%; /* Garante que o grid ocupe toda a largura disponível */
+  padding: 1rem; /* Adiciona espaçamento */
+}
+
+#mapa {
+  width: 95%; /* Garante que o mapa ocupe a largura total */
+  margin: 2rem 0; /* Margem vertical para espaçamento */
+}
+
+iframe {
+  border-radius: 10px;
+  width: 100%; /* Ajusta a largura do iframe para 100% */
+  height: 20rem; /* Mantém a altura do mapa */
+}
+
+#suporte {
+  background-color: ${colors.blackFundo};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza verticalmente */
+  width: 100%; /* Garante que ocupe toda a largura disponível */
+  max-width: 1000px; /* Define uma largura máxima, ajuste conforme necessário */
+  border-radius: 20px;
+  padding: 2rem; /* Adiciona um pouco de espaçamento interno */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+#titlesuporte {
+  font-family: 'Reem Kufi';
+  font-size: 40px; /* Ajusta o tamanho do título */
+  color: ${colors.white};
+  padding-bottom: 1rem; /* Espaço abaixo do título */
+}
+
+#campo {
+  width: 90%; /* Garante que o campo ocupe uma parte da largura disponível */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+#dados {
+  background-color: ${colors.blackFundo};
+  padding: 1rem 1rem 1rem 3rem; /* Espaço interno para ícone */
+  border: 1px solid ${colors.roxoPrincipal};
+  font-size: medium;
+  border-radius: 10px;
+  color: ${colors.whiteOpac};
+  width: 100%; /* Para garantir que o input ocupe toda a largura */
+  min-height: 3.5rem; /* Altura mínima do input */
+  transition: border-color 200ms; /* Transição suave na borda */
+}
+
+#buttonDiv {
+  display: flex;
+  justify-content: center; /* Centraliza o botão */
+  width: 100%; /* Garante que o div do botão ocupe toda a largura */
+}
+
+#button {
+  font-family: 'Raleway';
+  font-weight: bold;
+  text-decoration: none;
+  color: ${colors.white};
+  background-color: ${colors.roxoPrincipal};
+  padding: 1rem 2rem; /* Ajusta o padding do botão */
+  border-radius: 30px;
+}
+
+
+}
+
+
 `;
