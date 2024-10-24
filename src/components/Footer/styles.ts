@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { colors } from "../../styles/GlobalStyle"
+import styled from "styled-components";
+import { colors } from "../../styles/GlobalStyle";
 
 export const Footer = styled.aside`
     display: flex;
@@ -55,4 +55,47 @@ export const Footer = styled.aside`
         color: ${colors.white};
         font-family: 'Raleway';
     }
-`
+
+    /* Responsividade */
+    @media (max-width: 1370px) {
+        section {
+            margin: 0 10rem 0 10rem;
+        }
+
+        #logo {
+            font-size: 4rem;
+        }
+    }
+
+    @media (max-width: 1020px) {
+        section {
+            margin: 0 5rem 0 5rem;
+        }
+
+        #logo {
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: 810px) {
+        section {
+            margin: 0 3rem 0 3rem;
+        }
+
+        #logo {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 690px) {
+        section {
+            margin: 0;
+        }
+    }
+    @media (max-width: 500px) {
+        #logo {
+            display: none;
+            font-size: 2rem;
+        }
+    }
+`;

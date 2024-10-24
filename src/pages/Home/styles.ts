@@ -173,6 +173,7 @@ export const Section = styled.section`
     list-style: none;
     background: linear-gradient(${gradientes.purpleButtonO}, ${gradientes.purpleButtonT});
     border-radius: 12px;
+    width: 16rem;
     transition: background-color 300ms, transform 300ms;
     display: inline-block; 
     padding: 0.5rem 1rem; 
@@ -255,5 +256,218 @@ export const Section = styled.section`
 
   #span {
     height: 30rem;
+  }
+
+
+
+
+
+  @media (max-width: 1350px) {
+  // Estilização da div onde está o container
+    #depoimentoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2rem;
+        width: 70%;
+        height: 100%;
+    }
+  }
+
+  @media (max-width: 1170px) {
+  // Estilização da div onde está o container
+    #depoimentoContainer {
+        width: 80%;
+    }
+  }
+
+  @media (max-width: 1130px) {
+  // Estilização da div onde está o container
+    #depoimentoContainer {
+        width: 90%;
+    }
+
+    #texto {
+      width: 80%;
+    }
+
+    #botao {
+      width: 90%;
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 920px) {
+    #funcionalidades {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 2rem;
+      align-items: center;
+      text-align: center;
+      justify-content: space-around;
+    }
+
+    #span {
+      height: 30rem;
+    }
+
+    #botao {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 1rem;
+      gap: 1rem;
+    }
+
+    // Estilização dos depoimentos
+    .testimonial {
+      display: flex;
+      flex-direction: column;
+      background-color: ${colors.white};
+      width: 100%;
+      height: 15rem;
+      margin: 1rem;
+      align-items: center;
+      font-size: medium;
+    }
+    
+    #line {
+      width: 10em;
+      margin: 0 auto; /* Centraliza a linha */
+    }
+  }
+
+  @media (max-width: 860px) {
+    #sobre {
+      padding: 3rem 4rem 3rem 0rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    #texto {
+      width: 80%;
+    }
+
+    #botao {
+      width: 90%;
+    }
+
+    #mulher {
+      width: 400px;
+      height: 250px;
+    }
+
+    #sobre {
+      padding: 3rem 0rem 3rem 0rem;
+    }
+    
+    // Estilização da div onde está o container
+    #depoimentoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2rem;
+        width: 90%;
+        height: 100%;
+    }
+
+    // Estilização dos depoimentos
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        background-color: ${colors.white};
+        width: 100%;
+        height: 15rem;
+        margin: 0.5rem;
+        align-items: center;
+        font-size: small;
+    }
+  }
+
+  @media (max-width: 700px) {
+    #texto {
+      font-size: medium;
+      width: 80%;
+    }
+
+    #botao {
+      width: 80%;
+      gap: 1rem;
+    }
+
+  }
+
+  @media (max-width: 600px) {
+    // Estilização da div onde está o container
+    #depoimentoContainer {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 2rem;
+        padding: 2rem;
+        width: 70%;
+        height: 100%;
+    }
+
+    // Estilização dos depoimentos
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        height: 12rem;
+        margin: 1rem;
+        font-size: medium;
+    }
+  }
+
+  @media (max-width: 490px) {
+    // Estilo do título
+    h1 {
+      display: flex;
+      flex-direction: column;
+      color: ${colors.white};
+      font-family: 'Reem Kufi';
+      font-size: x-large;
+    }
+    
+    // Estilização da div onde está o container
+    #depoimentoContainer {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 2rem;
+        width: 80%;
+    }
+
+    // Estilização dos depoimentos
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        height: 14rem;
+        margin: 1rem;
+        font-size: medium;
+    }
+  }
+
+  @media (max-width: 490px) {
+    h1 {
+      display: flex;
+      flex-direction: column;
+      color: ${colors.white};
+      font-family: 'Reem Kufi';
+      font-size: large;
+    }
+    // Estilização da div onde está o container
+    #depoimentoContainer {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 2rem;
+        width: 80%;
+    }
+
+    // Estilização dos depoimentos
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        height: 16rem;
+        margin: 1rem;
+        font-size: medium;
+    }
   }
 `;

@@ -71,7 +71,7 @@ export function Home() {
             <Button link="/Cadastre-se_Usuario" text="Seja nosso usuário" />
           </div>
           <div id='botao'>
-          <Button link="/Login" text="Já faz parte? Login" />
+            <Button link="/Login" text="Já faz parte? Login" />
           </div>
         </div>
       </section>
