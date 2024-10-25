@@ -101,7 +101,7 @@ export const Section = styled.section`
 
   .stars {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     gap: 0.2rem;
   }
 

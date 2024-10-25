@@ -31,6 +31,7 @@ export const Footer = styled.aside`
 
     #title {
         font-family: 'Raleway';
+        font-size: x-large;
         color: ${colors.laranja};
     }
 
@@ -54,6 +55,7 @@ export const Footer = styled.aside`
     #text {
         color: ${colors.white};
         font-family: 'Raleway';
+        font-size: medium;
     }
 
     /* Responsividade */
@@ -63,7 +65,7 @@ export const Footer = styled.aside`
         }
 
         #logo {
-            font-size: 4rem;
+            font-size: 5rem;
         }
     }
 
@@ -73,7 +75,7 @@ export const Footer = styled.aside`
         }
 
         #logo {
-            font-size: 3rem;
+            font-size: 4rem;
         }
     }
 
@@ -83,7 +85,7 @@ export const Footer = styled.aside`
         }
 
         #logo {
-            font-size: 2rem;
+            font-size: 3rem;
         }
     }
 

@@ -53,8 +53,9 @@ export const NavBar = styled.aside`
 
     p {
       color: ${colors.navBarTitle};
-      font-family: 'Signika';
+      font-family: 'Raleway';
       font-size: x-large;
+      font-weight: 600;
       transition: color 0.3s;
       text-align: center; /* Alinha o texto ao centro */
 

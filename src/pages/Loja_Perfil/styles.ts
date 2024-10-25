@@ -20,7 +20,7 @@ export const Section = styled.section`
    width: 100%;
    height: 40rem;
    opacity: 40%;
-   filter: blur(0px);
+   filter: blur(3px);
  }
 
  #grid {
@@ -41,9 +41,9 @@ export const Section = styled.section`
  .align3 {
    display: flex;
    flex-direction: column;
-   height: 100%;
+   height: 10rem;
    padding: 1rem;
-   background: linear-gradient(${colors.roxoOpac}, ${colors.roxoOpac}, ${colors.laranjaOpac});
+   background: linear-gradient(${colors.roxoSecundario}, ${colors.roxoOpac});
  }
 
  .title {
@@ -96,7 +96,7 @@ export const Section = styled.section`
    align-items: center;
    justify-content: center;
    width: 100%;
-   border-top: 1rem solid ${colors.laranjaEscuro};
+   border-top: 1.5rem solid ${colors.laranjaEscuro};
  }
 
  .linha {
@@ -148,6 +148,7 @@ hr {
 }
 
 .text1 {
+  font-family: 'Raleway';
   margin-right: 1.5rem; /* Espaço entre o texto e o botão */
   color: ${colors.white}; /* Cor do texto */
   flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
@@ -182,9 +183,9 @@ hr {
 
 //contato
 .contact-background {
-  background-color: ${colors.roxoSecundario}; /* Fundo claro */
+  background: linear-gradient(${colors.laranjaEscuro}, ${colors.laranjaEscuro}, ${colors.laranja}); /* Fundo claro */
   border-radius: 10px; /* Bordas arredondadas */
-  padding: 2rem; /* Aumenta o espaçamento ao redor do conteúdo */
+  padding: 1rem; /* Aumenta o espaçamento ao redor do conteúdo */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   display: flex; /* Alinha os itens */
   flex-direction: column; /* Empilha os itens verticalmente */
@@ -192,17 +193,22 @@ hr {
   width: 300px; /* Largura fixa */
   height: 200px; /* Altura fixa */
   text-align: center;
+  animation: float 2s ease-in-out infinite; /* Adiciona a animação */
 
 }
 .contact-background:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px ${colors.grayInput};
   }
 
 .contact-background p {
+  font-family: 'Raleway';
+  font-weight: 500;
   color: white; /* Garante que o texto dentro seja branco */
 }
 
-
+.contact-background img {
+  margin: 1rem;
+}
 
 #grid3 {
   display: grid;
@@ -210,10 +216,6 @@ hr {
   gap: 20rem; /* Espaço entre os itens da grade */
   padding: 2rem; /* Espaçamento ao redor da grade */
 }
-
-
-
-
 
   /* Estilo do Conteúdo */
   #conteudo2 {
@@ -234,7 +236,7 @@ hr {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+  background: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,7 +245,7 @@ hr {
 }
 
 .popup-content {
-  background-color: ${colors.white}; /* Fundo branco */
+  background-color: ${colors.navBarTitle}; /* Fundo branco */
   border-radius: 12px;
   padding: 40px;
   width: 90%;
@@ -324,6 +326,7 @@ hr {
 }
 
 .concert-details h2 {
+  font-family: 'Raleway';
   font-size: 1.8em;
   margin-bottom: 15px;
   color: ${colors.roxoPrincipal}; /* Azul */
@@ -338,13 +341,15 @@ hr {
 
 .concert-details p {
   margin: 8px 0;
+  font-family: 'Raleway';
   font-size: 1em;
+  color: ${colors.roxoSecundario};
 }
 
 .concert-details span {
   display: block; /* Para deixar as informações mais destacadas */
   margin-top: 5px; /* Espaçamento entre as linhas */
-  color: #495057; /* Cinza escuro */
+  color: ${colors.blackFundo}; /* Cinza escuro */
   font-weight: 500; /* Aumentar o peso da fonte para destaque */
 }
 
@@ -535,4 +540,5 @@ hr {
   background: linear-gradient(to right, ${colors.laranja}, #FE5625);
   transform: scale(1.05);
 }
+
 `;
