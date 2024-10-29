@@ -13,6 +13,7 @@ export const Section = styled.section`
    width: 100%;
    height: 40rem;
    align-items: center;
+   justify-content: center;
  }
 
  #img {
@@ -122,7 +123,6 @@ hr {
       font-size: x-large;
     }
 }
-
 
 //serviços
 #grid2 {
@@ -541,4 +541,72 @@ hr {
   transform: scale(1.05);
 }
 
+@media (max-width: 2000px) {
+  .linha {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    color: white;
+  }
+}
+
+@media (max-width: 1810px) {
+  .linha {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1600px;
+    color: white;
+  }
+}
+
+@media (max-width: 1780px) {
+  #grid {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: 2rem; 
+  }
+
+  .square {
+    margin: 1rem; /* Espaçamento aumentado entre os quadrados */
+    flex: 1 1 30%; 
+    min-width: 250px; 
+    padding: 1rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+
+  #grid2 {
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    margin: 2rem 0; 
+  }
+
+  .servico {
+    flex: 1 1 30%; 
+    min-width: 200px; 
+    margin: 1rem; /* Espaçamento aumentado entre os serviços */
+    padding: 1rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #grid3 {
+    display: flex; 
+    flex-direction: row; /* Muda para coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 20rem; /* Espaçamento entre os itens */
+  }
+
+}
+
+@media (max-width: 1390px) {
+  img {
+    width: 90%;
+  }
+
+  #grid2 {
+    margin-left: 0rem;
+  }
+}
 `;

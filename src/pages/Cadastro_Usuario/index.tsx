@@ -15,7 +15,7 @@ export function Cadastro_Usuario() {
           <img src="src/assets/voltar.png" alt="voltar" id='img'/>
         </a>
       </div>
-      
+
       {/* Background e Formulário */}
       <div id="background">
         <div id='formulario'>

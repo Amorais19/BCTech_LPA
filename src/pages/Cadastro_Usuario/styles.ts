@@ -4,38 +4,40 @@ import { colors } from '../../styles/GlobalStyle';
 export const Section = styled.section`
     /* Layout */
     #background {
-        width: 99vw;
-        height: calc(100vh - 12.90rem);
-        background: linear-gradient(${colors.black}, ${colors.roxoSecundario});
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+    width: 99vw;
+    height: calc(100vh - 12.90rem);
+    background: linear-gradient(${colors.black}, ${colors.roxoSecundario});
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden; /* Removendo a barra de rolagem */
+  }
 
-    #fundoB {
-        justify-content: flex-start;
-        align-items: start;
-        padding-left: 5rem;
-    }
+  #fundoB {
+    justify-content: flex-start;
+    align-items: start;
+    padding-left: 5rem;
+  }
 
-    .align {
-        display: flex;
-        align-items: center;
-        width: 75rem;
-        margin-bottom: 2rem; /* Espaço abaixo da seção align */
-    }
+  .align {
+    display: flex;
+    align-items: center;
+    width: 75rem;
+    margin-bottom: 2rem; /* Espaço abaixo da seção align */
+  }
 
-    #link {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        padding: 1rem;
-        width: 75rem;
-        color: white;
-        font-family: 'Raleway';
-        margin-bottom: 2rem; /* Espaço abaixo do link */
-    }
+  #link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: white;
+    width: 100%;
+    font-family: 'Raleway';
+    margin-bottom: 2rem; /* Espaço abaixo do link */
+  }
+
 
     /* Estilo do Cabeçalho */
     h1 {
@@ -52,28 +54,19 @@ export const Section = styled.section`
         margin-bottom: 1rem; /* Espaço abaixo da imagem */
     }
 
-    #icon {
-        position: absolute;
-        left: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        color: white;
-        font-size: 1.2rem;
-    }
-
     /* Estilo do Formulário */
     #formulario {
         background-color: ${colors.blackOpac};
         border-radius: 20px;
         width: 75rem;
-        height: 35rem;
+        height: auto; /* Permitindo altura flexível */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
         border: 0.2rem solid ${colors.roxoPrincipal};
-        margin-bottom: 2rem; /* Espaço abaixo do formulário */
-        padding: 2rem; /* Aumentar espaço interno */
+        margin: 2rem 0; /* Espaço acima e abaixo do formulário */
+        padding: 4rem; /* Aumentar espaço interno */
     }
 
     /* Estilo dos Campos */
@@ -106,6 +99,16 @@ export const Section = styled.section`
 
     #inputContainer {
         position: relative;
+    }
+
+    /* Estilo do Icone */
+    #icon {
+        position: absolute;
+        left: 1rem; /* Ajuste a posição conforme necessário */
+        top: 50%;
+        transform: translateY(-50%);
+        color: white; /* Certifique-se de que a cor do ícone seja visível */
+        font-size: 1.2rem; /* Ajuste o tamanho conforme necessário */
     }
 
     /* Estilo do Título do Campo */
@@ -170,7 +173,7 @@ export const Section = styled.section`
     /* Media Queries for Responsiveness */
     @media (max-width: 1225px) {
         #background {
-            height: calc(100vh - 10rem);
+            height: auto; /* Permitir altura flexível */
         }
 
         .align {
@@ -183,7 +186,6 @@ export const Section = styled.section`
 
         #formulario {
             width: 90%;
-            height: auto; /* Permitir altura flexível */
             padding: 2rem; /* Ajustar padding */
         }
 
@@ -207,77 +209,69 @@ export const Section = styled.section`
         }
 
         #link {
-            display: flex;
-            align-items: center;
-            justify-content: end;
             padding: 0.5rem; /* Aumentar padding */
             width: 65rem;
             margin-bottom: 1rem; /* Espaço abaixo do link */
         }
     }
-
-    @media (max-width: 1211px) {
-        #link {
-            width: 55rem;
-        }
-    }
-
-    @media (max-width: 931px) {
-        #link {
-            width: 40rem;
-        }
-    }
-
-    @media (max-width: 571px) {
-        #formulario {
-            background-color: ${colors.blackOpac};
-            border-radius: 20px;
-            width: 90%; /* Ajustar largura para se adaptar à tela */
-            height: auto; /* Permitir altura flexível */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* Centraliza o conteúdo */
-            border: 0.2rem solid ${colors.roxoPrincipal};
-            margin-bottom: 1rem; /* Reduzir espaço abaixo do formulário */
-            padding: 1rem; /* Ajustar espaço interno */
-        }
-
+    @media (max-width: 580px) {
         h1 {
-            font-size: 2rem; /* Diminuir o tamanho da fonte do cabeçalho */
-            margin-bottom: 1rem; /* Ajustar espaço abaixo do cabeçalho */
+            font-size: 28px; /* Diminuir tamanho da fonte */
+        }
+    }
+    /* Further media queries to handle smaller screens */
+    @media (max-width: 550px) {
+        #layout {
+            display: flex;
+            flex-direction: column; /* Muda a direção do layout para coluna */
+            width: 100%; /* Garantir que ocupe a largura total */
+            overflow: hidden; /* Prevent overflow */
         }
 
-        img {
-            width: 2rem; /* Reduzir a largura da imagem */
-            margin-bottom: 0.5rem; /* Ajustar espaço abaixo da imagem */
+        #background {
+            height: auto; /* Allows background to grow with content */
+            overflow: hidden; /* Remove a barra de rolagem acima de 550px */
         }
 
-        #link {
-            width: 100%; /* Ajustar largura do link */
-            margin-bottom: 1rem; /* Ajustar espaço abaixo do link */
-            padding: 0.5rem; /* Ajustar padding do link */
-        }
-
-        #buttonDiv {
-            margin-top: 0.5rem; /* Ajustar espaço acima dos botões */
-            margin-bottom: 1rem; /* Ajustar espaço abaixo dos botões */
-        }
-
-        #input {
-            width: 100%; /* Garantir que o input ocupe toda a largura */
-            padding: 1rem; /* Ajustar padding do input */
+        #linhas {
+            flex-direction: column; /* Empilha os inputs verticalmente */
+            gap: 1rem; /* Espaço entre os campos */
         }
 
         #campo,
         #campoE {
-            width: 100%; /* Campos ocupam toda a largura */
+            width: 100%; /* Garantir que os campos ocupem toda a largura */
+            flex-direction: column; /* Empilha o label e o input verticalmente */
+        }
+        h1 {
+            font-size: 2rem; /* Diminuir tamanho da fonte */
         }
 
-        li {
-            width: 90%; /* Largura dos botões em telas menores */
-            height: 2.5rem; /* Altura do botão reduzida */
-            font-size: small; /* Diminuir o tamanho da fonte do botão */
+    }
+
+    @media (max-width: 550px) {
+        h1 {
+            font-size: 22px; /* Diminuir tamanho da fonte */
         }
     }
+
+    @media (max-width: 380px) {
+        h1 {
+            font-size: px; /* Diminuir tamanho da fonte */
+        }
+    }
+
+    @media (max-width: 550px) {
+        h1 {
+            font-size: 22px; /* Diminuir tamanho da fonte */
+        }
+    }
+
+    @media (max-width: 380px) {
+        h1 {
+            font-size: 20px; /* Diminuir tamanho da fonte */
+        }
+    }
+;
+
 `;

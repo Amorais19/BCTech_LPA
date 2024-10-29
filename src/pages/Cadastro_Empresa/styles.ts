@@ -12,6 +12,7 @@ export const Section = styled.section`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden; /* Removendo a barra de rolagem */
   }
 
   #fundoB {
@@ -24,33 +25,38 @@ export const Section = styled.section`
     display: flex;
     align-items: center;
     width: 75rem;
+    margin-bottom: 2rem; /* Espaço abaixo da seção align */
   }
 
   #link {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     padding: 1rem;
-    width: 75rem;
     color: white;
+    width: 100%;
     font-family: 'Raleway';
+    margin-bottom: 2rem; /* Espaço abaixo do link */
   }
 
   #layout {
     display: flex;
     gap: 3rem;
+    flex-wrap: wrap; /* Permite quebra em novas linhas se necessário */
   }
 
   #formulario {
     background-color: ${colors.blackOpac};
     border-radius: 20px;
     width: 75rem;
-    height: 35rem;
+    height: auto; /* Permitindo altura flexível */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     border: 0.2rem solid ${colors.roxoPrincipal};
+    padding: 4rem; /* Aumentar espaço interno */
+    margin: 2rem 0; /* Espaço acima e abaixo do formulário */
   }
 
   /* Textos */
@@ -59,6 +65,7 @@ export const Section = styled.section`
     font-weight: bold;
     font-size: 4rem;
     font-family: 'Reem Kufi';
+    margin-bottom: 2rem; /* Espaço abaixo do cabeçalho */
   }
 
   #titulo {
@@ -97,6 +104,9 @@ export const Section = styled.section`
   #buttonDiv {
     display: flex;
     gap: 3rem;
+    justify-content: center; /* Centraliza os botões */
+    margin-top: 1rem; /* Espaço acima dos botões */
+    margin-bottom: 2rem; /* Espaço abaixo dos botões */
   }
 
   li {
@@ -110,6 +120,7 @@ export const Section = styled.section`
     width: 12rem;
     height: 3rem;
     text-align: center;
+    cursor: pointer; /* Mão ao passar o mouse */
   }
 
   li a {
@@ -119,6 +130,7 @@ export const Section = styled.section`
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
+    width: 100%; /* Link ocupa toda a área do botão */
   }
 
   /* Interações */
@@ -135,6 +147,7 @@ export const Section = styled.section`
   /* Imagens */
   img {
     width: 4rem;
+    margin-bottom: 1rem; /* Espaço abaixo da imagem */
   }
 
   #icon {
@@ -144,5 +157,125 @@ export const Section = styled.section`
     transform: translateY(-50%); /* Centraliza verticalmente */
     color: white; /* Muda a cor do ícone para branco */
     font-size: 1.2rem; /* Tamanho do ícone */
+  }
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1225px) {
+    #background {
+      height: auto; /* Permitir altura flexível */
+    }
+
+    .align {
+      width: 90%;
+    }
+
+    #link {
+      width: 90%;
+    }
+
+    #formulario {
+      width: 90%;
+      padding: 2rem; /* Ajustar padding */
+    }
+
+    #campo {
+      width: 100%; /* Campos ocupam toda a largura */
+    }
+
+    h1 {
+      font-size: 3rem; /* Diminuir tamanho da fonte */
+    }
+
+    #buttonDiv {
+      gap: 1rem; /* Reduzir espaço entre botões */
+      flex-direction: row; /* Manter botões lado a lado */
+    }
+
+    li {
+      width: 10rem; /* Ajustar a largura dos botões em telas menores */
+    }
+
+    #link {
+      padding: 0.5rem; /* Aumentar padding */
+      width: 65rem;
+      margin-bottom: 1rem; /* Espaço abaixo do link */
+    }
+  }
+
+  @media (max-width: 800px) {
+    #layout {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 630px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 580px) {
+    h1 {
+      font-size: 30px; /* Diminuir tamanho da fonte */
+    }
+  }
+
+  @media (max-width: 550px) {
+    #layout {
+      display: flex;
+      flex-direction: column; /* Muda a direção do layout para coluna */
+      width: 100%; /* Garantir que ocupe a largura total */
+      overflow: hidden; /* Prevent overflow */
+    }
+
+    #background {
+      height: auto; /* Allows background to grow with content */
+      overflow: hidden; /* Remove a barra de rolagem acima de 550px */
+    }
+
+    #campo {
+      width: 100%; /* Garantir que os campos ocupem toda a largura */
+    }
+
+    h1 {
+      font-size: 30px; /* Diminuir tamanho da fonte */
+    }
+  }
+
+  @media (max-width: 420px) {
+    h1 {
+      font-size: 25px; /* Diminuir tamanho da fonte */
+    }
+
+    #campo {
+      width: 15rem;
+    }
+
+    #buttonDiv {
+      width: 80%;
+    }
+
+    li a{
+      font-size: small;
+    }
+  }
+
+  @media (max-width: 380px) {
+    h1 {
+      font-size: 19px; /* Diminuir tamanho da fonte */
+    }
+
+    #campo {
+      width: 12rem;
+    }
+
+    #buttonDiv {
+      width: 100%;
+    }
+
+    li a{
+      font-size: 11px;
+    }
   }
 `;

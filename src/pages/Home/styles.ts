@@ -242,14 +242,57 @@ export const Section = styled.section`
     }
   }
 
-  @media (max-width: 1020px) {
+  @media (max-width: 1200px) {
+    #depoimentoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2rem;
+        width: 90%;
+        height: 100%;
+    }
+  }
+
+  @media (max-width: 1080px) {
     #mulher {
       width: 400px;
       height: 250px;
     }
+
+    #botao {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 1rem;
+      gap: 1rem;
+    }
+
+    li {
+      width: 16rem;
+      display: inline-block; 
+      padding: 0.5rem 1rem; 
+    }
+
+    li a {
+      font-size: medium;
+      text-align: center; 
+    }
+
+    #funcionalidades {
+      grid-template-columns: auto auto;
+      padding-left: 1rem;
+    }
+
+    #line {
+      width: 10em;
+      margin: 0 auto;
+    }
   }
 
   @media (max-width: 920px) {
+    #span {
+      height: 30rem;
+    }
+
     #funcionalidades {
       display: grid;
       grid-template-columns: auto;
@@ -257,10 +300,7 @@ export const Section = styled.section`
       align-items: center;
       text-align: center;
       justify-content: space-around;
-    }
-
-    #span {
-      height: 30rem;
+      padding-left: 0rem;
     }
 
     #botao {
@@ -279,11 +319,6 @@ export const Section = styled.section`
       margin: 1rem;
       align-items: center;
       font-size: medium;
-    }
-    
-    #line {
-      width: 10em;
-      margin: 0 auto; /* Centraliza a linha */
     }
   }
 
@@ -358,6 +393,11 @@ export const Section = styled.section`
         height: 100%;
     }
 
+    #funcao {
+      display: grid;
+      grid-template-columns: auto;
+    }
+
     .testimonial {
       display: flex;
       flex-direction: column;
@@ -377,7 +417,7 @@ export const Section = styled.section`
     }
 
     #textinho {
-      width: 30rem;
+      width: 100%;
     }
 
     #width {
@@ -391,13 +431,8 @@ export const Section = styled.section`
   }
 
   @media (max-width: 490px) {
-    #funcao {
-      display: grid;
-      grid-template-columns: auto;
-    }
-
     #textinho {
-      width: 320px;
+      width: 100%;
     }
 
     #width {

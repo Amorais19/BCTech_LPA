@@ -189,7 +189,7 @@ interface ContactSquareProps {
 
 // Componente para cada quadrado de contato
 const ContactSquare: React.FC<ContactSquareProps> = ({ label, info, imgSrc }) => (
-  <div id="square">
+  <div id="squares">
     <img src={imgSrc} alt={label} id='image' />
     <p id='subtitle'>{label}</p>
     <p id='subtext'>{info}</p>
