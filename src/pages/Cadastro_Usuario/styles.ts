@@ -49,6 +49,7 @@ export const Section = styled.section`
     /* Estilo da Imagem */
     img {
         width: 4rem;
+        margin-bottom: 1rem; /* Espaço abaixo da imagem */
     }
 
     #icon {
@@ -72,6 +73,7 @@ export const Section = styled.section`
         justify-content: space-evenly;
         border: 0.2rem solid ${colors.roxoPrincipal};
         margin-bottom: 2rem; /* Espaço abaixo do formulário */
+        padding: 2rem; /* Aumentar espaço interno */
     }
 
     /* Estilo dos Campos */
@@ -182,6 +184,7 @@ export const Section = styled.section`
         #formulario {
             width: 90%;
             height: auto; /* Permitir altura flexível */
+            padding: 2rem; /* Ajustar padding */
         }
 
         #campo,
@@ -202,40 +205,79 @@ export const Section = styled.section`
             width: 10rem; /* Ajustar a largura dos botões em telas menores */
             height: 3rem; /* Altura do botão */
         }
-        #link{
+
+        #link {
             display: flex;
-        align-items: center;
-        justify-content: end;
-        padding: 0.1;
-        width: 65rem;
-        color: white;
-        font-family: 'Raleway';
-        margin-bottom: 1rem; /* Espaço abaixo do link */
+            align-items: center;
+            justify-content: end;
+            padding: 0.5rem; /* Aumentar padding */
+            width: 65rem;
+            margin-bottom: 1rem; /* Espaço abaixo do link */
         }
     }
-     @media (max-width: 1211px) {
-        #link{
+
+    @media (max-width: 1211px) {
+        #link {
+            width: 55rem;
+        }
+    }
+
+    @media (max-width: 931px) {
+        #link {
+            width: 40rem;
+        }
+    }
+
+    @media (max-width: 571px) {
+        #formulario {
+            background-color: ${colors.blackOpac};
+            border-radius: 20px;
+            width: 90%; /* Ajustar largura para se adaptar à tela */
+            height: auto; /* Permitir altura flexível */
             display: flex;
-        align-items: center;
-        justify-content: end;
-        padding: 0.1;
-        width: 55rem;
-        color: white;
-        font-family: 'Raleway';
-        margin-bottom: 1rem; /* Espaço abaixo do link */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Centraliza o conteúdo */
+            border: 0.2rem solid ${colors.roxoPrincipal};
+            margin-bottom: 1rem; /* Reduzir espaço abaixo do formulário */
+            padding: 1rem; /* Ajustar espaço interno */
         }
-     }
-     @media (max-width: 931px) {
-        #link{
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        padding: 0.1;
-        width: 40rem;
-        color: white;
-        font-family: 'Raleway';
-        margin-bottom: 1rem; /* Espaço abaixo do link */
+
+        h1 {
+            font-size: 2rem; /* Diminuir o tamanho da fonte do cabeçalho */
+            margin-bottom: 1rem; /* Ajustar espaço abaixo do cabeçalho */
         }
-     }
-    
+
+        img {
+            width: 2rem; /* Reduzir a largura da imagem */
+            margin-bottom: 0.5rem; /* Ajustar espaço abaixo da imagem */
+        }
+
+        #link {
+            width: 100%; /* Ajustar largura do link */
+            margin-bottom: 1rem; /* Ajustar espaço abaixo do link */
+            padding: 0.5rem; /* Ajustar padding do link */
+        }
+
+        #buttonDiv {
+            margin-top: 0.5rem; /* Ajustar espaço acima dos botões */
+            margin-bottom: 1rem; /* Ajustar espaço abaixo dos botões */
+        }
+
+        #input {
+            width: 100%; /* Garantir que o input ocupe toda a largura */
+            padding: 1rem; /* Ajustar padding do input */
+        }
+
+        #campo,
+        #campoE {
+            width: 100%; /* Campos ocupam toda a largura */
+        }
+
+        li {
+            width: 90%; /* Largura dos botões em telas menores */
+            height: 2.5rem; /* Altura do botão reduzida */
+            font-size: small; /* Diminuir o tamanho da fonte do botão */
+        }
+    }
 `;
