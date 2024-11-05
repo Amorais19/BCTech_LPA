@@ -26,7 +26,8 @@ export const Section = styled.section`
 
  #grid {
    position: absolute;
-   display: flex;
+   display: grid;
+   grid-template-columns: auto auto auto;
    justify-content: center;
    margin: 5rem;
  }
@@ -573,7 +574,6 @@ hr {
     flex: 1 1 30%; 
     min-width: 250px; 
     padding: 1rem; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   }
 
   #grid2 {
@@ -615,19 +615,57 @@ hr {
   }
 }
 
+@media (max-width: 1030px) {
+  .square {
+    width: 80%;
+  }
+
+  .square > .align3 + img {
+    display: none;
+  }
+
+  .square > .align3 {
+    display: none;
+  }
+}
+
 @media (max-width: 1000px) {
   #grid2 {
     grid-template-columns: auto;
+    justify-items: center;
   }
 
   #grid3 {
     gap: 10rem;
+  }
+
+  #buttonDiv {
+    display: flex;
+    margin: 5px 0 0 0;
+  }
+
+  .text1 {
+    padding-top: 5px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .servico1, .servico2, .servico3{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center; 
   }
 }
 
 @media (max-width: 900px) {
   #grid3 {
     gap: 5rem;
+  }
+
+  #sinopse {
+    width: 80%;
   }
 }
 
@@ -649,6 +687,23 @@ hr {
   .contact-background img {
     margin: 0rem;
     width: 80%;
+  }
+
+  .square > .align2 + img {
+    display: none;
+  }
+  .square > .align2 {
+    display: none;
+  }
+
+  .square {
+    margin: 0;
+  }
+
+  #grid {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
   }
 
 }
@@ -674,5 +729,48 @@ hr {
     margin: 0rem;
     width: 80%;
   }
+
+  #sinopse {
+    width: 90%;
+  }
+
+  .name{
+    font-size: x-large;
+  }
+  .subtitle{
+    font-size: larger;
+  }
+  .subtext {
+    width: 90%;
+    font-size: medium;
+  } 
 }
+
+@media (max-width: 480px) {
+  .square {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #grid2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #buttonDiv {
+    display: flex;
+    margin: 5px 0 0 0;
+  }
+
+  .text1 {
+    padding-top: 5px;
+  }
+
+  .servico1 > img, .servico2 > img, .servico3 > img{
+    width: 80%;
+  }
+}
+
 `;

@@ -30,7 +30,6 @@ export const NavBar = styled.aside`
     padding: 0;
     margin: 0;
     list-style: none; /* Remove as bolinhas */
-    transition: max-height 0.3s ease-in-out, background-color 0.3s; /* Adicionada transição para a cor de fundo */
     max-height: 0; /* Inicialmente oculto */
     overflow: hidden;
     border-radius: 4px; /* Cantos arredondados */
@@ -40,6 +39,8 @@ export const NavBar = styled.aside`
 
   ul.open {
     max-height: 300px; /* Altura máxima para expandir */
+    position: absolute;
+    margin-top: 2.5rem;
   }
 
   a {
