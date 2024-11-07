@@ -364,7 +364,7 @@ hr {
 
 
 //chat bot
- .stylish-chat-container {
+.stylish-chat-container {
    display: flex;
    align-items: center;
    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
@@ -378,7 +378,7 @@ hr {
    z-index: 1000;
    cursor: pointer;
    animation: slide-up 0.5s ease-out;
- }
+}
 
  @keyframes slide-up {
    from {
@@ -497,9 +497,7 @@ hr {
  .chat-avatar {
    width: 60px;
    height: 60px;
-   border-radius: 50%;
-   margin-right: 15px;
-   border: 2px solid ${colors.white};
+  border: 0px;
  }
 
  .chat-message {
@@ -772,5 +770,235 @@ hr {
     width: 80%;
   }
 }
+/* Animação para o slide-up */
+@keyframes slide-up {
+   from {
+     transform: translateY(100px);
+     opacity: 0;
+   }
+   to {
+     transform: translateY(0);
+     opacity: 1;
+   }
+}
 
+/*-----------------------------------------------------------------------*/
+
+
+
+/* Tornando o botão responsivo para telas menores (abaixo de 740px) */
+@media (max-width: 740px) {
+   .stylish-chat-container {
+     width: 60px; /* Largura reduzida */
+     height: 60px; /* Mantendo a altura igual para ser uma bolinha */
+     padding: 10px;
+     border-radius: 50%; /* Tornando o botão circular */
+     bottom: 15px; /* Ajustando a posição */
+     right: 15px; /* Ajustando a posição */
+     transition: all 0.3s ease; /* Efeito suave de transição */
+   }
+
+   /* Efeito ao passar o mouse */
+   .stylish-chat-container:hover {
+     transform: scale(1.1); /* Efeito de zoom */
+   }
+}
+
+/* Para telas médias (acima de 760px) e menores que 1024px */
+@media (min-width: 761px) and (max-width: 1023px) {
+   .stylish-chat-container {
+     width: 80px; /* Largura maior em telas médias */
+     height: 80px;
+     padding: 15px;
+     bottom: 20px; /* Ajustando a posição */
+     right: 20px; /* Ajustando a posição */
+   }
+
+   .chat-modal {
+     width: 350px; /* Ajuste da largura do modal */
+     height: 450px;
+   }
+}
+
+/* Para telas grandes (1024px ou mais) */
+@media (min-width: 1024px) {
+   .stylish-chat-container {
+     width: 350px; /* Largura maior em telas grandes */
+     height: 75px; /* Altura proporcional */
+     padding: 15px;
+     bottom: 30px; /* Ajuste para telas grandes */
+     right: 30px;
+   }
+   .chat-modal {
+     width: 400px;
+     height: 450px;
+   }
+}
+
+/* Para telas ultra-large (acima de 1800px) */
+@media (min-width: 1800px) {
+   .stylish-chat-container {
+     width: 380px;
+     height: 80px;
+     padding: 20px;
+   }
+   .chat-modal {
+     width: 500px;
+     height: 600px;
+   }
+}
+
+/* Estilos do modal de chat */
+.chat-modal {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: 350px;
+  max-width: 90%;
+  height: 400px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  animation: fade-in 0.3s ease;
+  border-radius: 35px;
+  overflow: hidden;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Corpo do chat */
+.chat-body {
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+  background: linear-gradient(to bottom, #555555 , #757575);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Estilos do cabeçalho da pergunta */
+.header-question {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0.5rem;
+  background-color: gray;
+  border-radius: 30px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.header-question p {
+  font-family: 'Raleway';
+  font-weight: 500;
+  padding-left: 0.5rem;
+  color: #fff;
+}
+
+.mascot-image {
+  width: 10%; /* Proporcional */
+  max-width: 40px; /* Largura máxima */
+  height: auto;
+  background-color: #606060;
+  border-radius: 20px;
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-right: 10px;
+  font-family: 'Raleway', sans-serif;
+  background: rgba(255, 255, 255, 0.8);
+  transition: border 0.3s;
+}
+
+.chat-input:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+.send-button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.send-button:hover {
+  background: linear-gradient(135deg, #5a0eb4, #1e6db0);
+  transform: scale(1.05);
+}
+
+.chat-content {
+   display: flex;
+   align-items: center;
+}
+
+.chat-avatar {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   margin-right: 15px;
+   border: 2px solid #fff;
+}
+
+.chat-message {
+   color: white;
+   font-family: 'Reem Kufi', sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+   padding: 10px 15px;
+   border-radius: 15px;
+   margin-bottom: 10px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bot {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); /* Colunas responsivas */
+  column-gap: 2px; /* Espaçamento entre as colunas */
+  row-gap: 10px; /* Espaçamento entre as linhas */
+  margin: 20px 0;
+  justify-items: center;
+}
+
+.bot-button {
+  width: 90%; /* Largura proporcional */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-family: 'Raleway', sans-serif;
+  font-size: smaller;
+  font-weight: 500;
+  text-align: start;
+}
+
+.bot-button:hover {
+  background: linear-gradient(to right, #FF5B2A, #FE5625);
+  transform: scale(1.05);
+}
 `;

@@ -230,4 +230,69 @@ export const Section = styled.section`
         filter: blur(5px);
     }
 
+    /* Media Queries */
+    @media (max-width: 768px) {
+        #body {
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        #buttonDiv {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: medium;
+            margin-left: 0;
+            text-align: center;
+        }
+
+        button {
+            width: 20rem; /* Ajusta a largura do botão em telas menores */
+            font-size: 14px; /* Tamanho do texto menor */
+        }
+
+        #campo {
+            width: 100%;
+            max-width: 20rem; /* Ajusta a largura para dispositivos móveis */
+        }
+
+        .popup-content {
+            width: 90%;
+            max-width: 22rem;
+            height: auto;
+            padding: 20px;
+        }
+
+        #input {
+            width: 100%; /* Faz o campo de input ocupar a largura total */
+        }
+
+        .input-icon {
+            background-size: 12px;
+            padding-left: 25px;
+        }
+
+        /* Ajusta layout de links e botões */
+        a {
+            font-size: 14px;
+        }
+
+        #titulo {
+            font-size: medium;
+        }
+    }
 `;
