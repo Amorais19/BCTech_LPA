@@ -1,4 +1,5 @@
 import * as S from './styles';
+import logo from "../../assets/logo.png"
 
 // Componente principal Home
 export function Home() {
@@ -11,7 +12,7 @@ export function Home() {
       {/* Seção de Cabeçalho */}
       <section className='linear'>
         <picture>
-          <img src={require("../../assets/logo.png")} alt="logo" id='logo' />
+          <img src={logo} alt="logo" id='logo' />
         </picture>
       </section>
 
