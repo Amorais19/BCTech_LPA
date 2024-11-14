@@ -1,5 +1,4 @@
 import * as S from './styles'; // Importa os estilos (styled-components)
-import React from 'react'; // Importa o React, necessário para criar componentes
 import AliceCarousel from 'react-alice-carousel'; // Importa o componente de carrossel (biblioteca AliceCarousel)
 import 'react-alice-carousel/lib/alice-carousel.css'; // Importa o estilo CSS do AliceCarousel
 import { Link } from 'react-router-dom'; // Importa o Link para navegação entre páginas
