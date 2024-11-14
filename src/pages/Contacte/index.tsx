@@ -8,6 +8,29 @@ import whatsappImg from '../../assets/wpp.png';
 import emailImg from '../../assets/mail.png'; 
 import locationImg from '../../assets/loc.png'; 
 
+// Tipos para as props dos componentes
+import { IconDefinition } from '@fortawesome/fontawesome-common-types'; // Importando o tipo de ícone correto
+
+// Definição das props para o ContactSquare
+interface ContactSquareProps {
+  label: string;
+  info: string;
+  imgSrc: string;
+}
+
+// Definindo as props para o SupportField
+interface SupportFieldProps {
+  label: string;
+  placeholder: string;
+  type?: 'text' | 'email' | 'textarea';  // Tipagem do type com valores possíveis
+  icon: IconDefinition;  // Tipando o ícone
+}
+
+interface ButtonProps {
+  link: string;
+  text: string;
+}
+
 export function Contacte() {
   return (
     <S.Section>
@@ -46,7 +69,8 @@ export function Contacte() {
   );
 }
 
-const ContactSquare = ({ label, info, imgSrc }) => (
+// Componente ContactSquare tipado
+const ContactSquare: React.FC<ContactSquareProps> = ({ label, info, imgSrc }) => (
   <div id="square">
     <img src={imgSrc} alt={label} id='image' />
     <p id='subtitle'>{label}</p>
@@ -54,6 +78,7 @@ const ContactSquare = ({ label, info, imgSrc }) => (
   </div>
 );
 
+// Componente MapSection
 const MapSection = () => (
   <div id="mapa">
     <iframe
@@ -67,6 +92,7 @@ const MapSection = () => (
   </div>
 );
 
+// Componente SupportSection
 const SupportSection = () => (
   <div id='suporte'>
     <h3 id='titlesuporte'>SUPORTE</h3>
@@ -79,23 +105,24 @@ const SupportSection = () => (
   </div>
 );
 
-const SupportField = ({ label, placeholder, type = "text", icon }) => (
+// Componente SupportField com as props tipadas
+const SupportField: React.FC<SupportFieldProps> = ({ label, placeholder, type = 'text', icon }) => (
   <div id="campo">
     <label htmlFor={label.toLowerCase()} id="titulo">{label}</label>
     <div id="inputContainer">
       <FontAwesomeIcon icon={icon} id="icon" />
-      <input type={type} name={label.toLowerCase()} id="dados" placeholder={placeholder} />
+      {type === 'textarea' ? (
+        <textarea name={label.toLowerCase()} id="dados" placeholder={placeholder}></textarea>
+      ) : (
+        <input type={type} name={label.toLowerCase()} id="dados" placeholder={placeholder} />
+      )}
     </div>
   </div>
 );
 
-interface ButtonProps {
-  link: string;
-  text: string;
-}
-
+// Componente Button
 const Button: React.FC<ButtonProps> = ({ link, text }) => (
-    <a href={link} id="button">
-      {text}
-    </a>
+  <a href={link} id="button">
+    {text}
+  </a>
 );

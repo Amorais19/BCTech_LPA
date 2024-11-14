@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, gradientes } from '../../styles/GlobalStyle';
+import { colors } from '../../styles/GlobalStyle';
 
 export const Section = styled.section`
  display: flex;

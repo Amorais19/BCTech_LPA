@@ -1,5 +1,5 @@
 import * as S from './styles';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export function PerfilEditar() {
   const [showPopup, setShowPopup] = useState(false);
