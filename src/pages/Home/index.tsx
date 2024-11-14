@@ -11,7 +11,7 @@ export function Home() {
       {/* Seção de Cabeçalho */}
       <section className='linear'>
         <picture>
-          <img src="src/assets/logo.png" alt="logo" id='logo' />
+          <img src={require("../../assets/logo.png")} alt="logo" id='logo' />
         </picture>
       </section>
 
