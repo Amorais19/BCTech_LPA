@@ -1,8 +1,45 @@
+import React, { useState } from 'react';
 import * as S from './styles';
 import logo from "../../assets/logo.png"
 
-// Componente principal Home
 export function Home() {
+  // Estado para gerenciar os depoimentos
+  const [testimonials, setTestimonials] = useState([
+    {
+      userName: "João Silva",
+      feedback: "O BCTech facilitou muito a minha vida! Encontrei a assistência que precisava rapidamente.",
+      profileImage: "src/assets/homemperfil1.png"
+    },
+    {
+      userName: "Maria Oliveira",
+      feedback: "A plataforma é intuitiva e tem várias opções. Recomendo a todos!",
+      profileImage: "src/assets/mulherperfil.png"
+    },
+    {
+      userName: "Carlos Mendes",
+      feedback: "Excelente ideia! Meus negócios cresceram com as parcerias que encontrei aqui.",
+      profileImage: "src/assets/homemperfil2.png"
+    }
+  ]);
+
+  // Função para adicionar mais depoimentos ao clicar no botão
+  const addMoreTestimonials = () => {
+    const newTestimonials = [
+      {
+        userName: "Fernanda Lima",
+        feedback: "Achei incrível como posso encontrar serviços de forma rápida e segura!",
+        profileImage: "src/assets/homemperfil3.png"
+      },
+      {
+        userName: "Ricardo Gomes",
+        feedback: "A plataforma realmente ajudou a conectar o meu negócio com novos clientes!",
+        profileImage: "src/assets/mulherperfil2.png"
+      }
+    ];
+
+    setTestimonials((prevTestimonials) => [...prevTestimonials, ...newTestimonials]);
+  };
+
   return (
     <S.Section>
       <style>
@@ -81,21 +118,19 @@ export function Home() {
       <section id='depoimentos'>
         <h1>O que nossos usuários dizem</h1>
         <div id='depoimentoContainer'>
-          <Testimonial
-            userName="João Silva"
-            feedback="O BCTech facilitou muito a minha vida! Encontrei a assistência que precisava rapidamente."
-            profileImage="src/assets/homemperfil1.png"
-          />
-          <Testimonial
-            userName="Maria Oliveira"
-            feedback="A plataforma é intuitiva e tem várias opções. Recomendo a todos!"
-            profileImage="src/assets/mulherperfil.png"
-          />
-          <Testimonial
-            userName="Carlos Mendes"
-            feedback="Excelente ideia! Meus negócios cresceram com as parcerias que encontrei aqui."
-            profileImage="src/assets/homemperfil2.png"
-          />
+          {testimonials.map((testimonial, index) => (
+            <Testimonial
+              key={index}
+              userName={testimonial.userName}
+              feedback={testimonial.feedback}
+              profileImage={testimonial.profileImage}
+            />
+          ))}
+        </div>
+
+        {/* Botão para adicionar mais depoimentos */}
+        <div id="moreTestimonialsBtn">
+          <Button onClick={addMoreTestimonials} text="Adicionar mais comentário" />
         </div>
       </section>
     </S.Section>
@@ -121,15 +156,22 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ imageSrc, altText, title, des
 
 // Componente Button
 interface ButtonProps {
-  link: string;
+  link?: string;
   text: string;
+  onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ link, text }) => (
+const Button: React.FC<ButtonProps> = ({ link, text, onClick }) => (
   <li>
-    <a href={link} id="center">
-      {text}
-    </a>
+    {link ? (
+      <a href={link} id="center">
+        {text}
+      </a>
+    ) : (
+      <button onClick={onClick} id="center">
+        {text}
+      </button>
+    )}
   </li>
 );
 
