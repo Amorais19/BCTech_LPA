@@ -1,5 +1,10 @@
 import * as S from './styles';
 import { useState } from 'react';
+import fotousuario from "../../assets/usuariog.png" 
+import usuarioIcone from "../../assets/usuarioIcone.png"
+import senhaIcone from "../../assets/senhaIcone.png"
+import emailIcone from "../../assets/emailIcone.png" 
+
 
 export function PerfilEditar() {
   const [showPopup, setShowPopup] = useState(false);
@@ -22,7 +27,7 @@ export function PerfilEditar() {
       {/* Foto */}
       <section id='foto'>
         <div id="pessoa">
-          <img src="src/assets/usuariog.png" alt="foto" id="usuariog" />
+          <img src={fotousuario} alt="foto" id="usuariog" />
         </div>
       </section>
 
@@ -36,11 +41,11 @@ export function PerfilEditar() {
               <input type="text" name="nome" placeholder="Insira seu nome" id="input" />
             </div>
             <div id='campo'>
-              <img src="src/assets/usuarioIcone.png" alt="usuario" id="icones" />
+              <img src={usuarioIcone} alt="usuario" id="icones" />
               <p>000.000.000-00</p>
             </div>
             <div id='campo'>
-              <img src="src/assets/senhaIcone.png" alt="senha" id="icones" />
+              <img src={senhaIcone} alt="senha" id="icones" />
               <p>..........</p>
             </div>
             <div id="MudarSenha">
@@ -50,7 +55,7 @@ export function PerfilEditar() {
 
           <div id='coluna'>
             <div id='campo'>
-              <img src="src/assets/emailIcone.png" alt="email" id="icones" />
+              <img src={emailIcone} alt="email" id="icones" />
               <p>joaozin@gmail.com</p>
             </div>
             <div id="layout">

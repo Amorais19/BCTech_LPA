@@ -7,7 +7,7 @@ import phoneImg from '../../assets/phone.png';
 import whatsappImg from '../../assets/wpp.png'; 
 import emailImg from '../../assets/mail.png'; 
 import locationImg from '../../assets/loc.png'; 
-
+import teclado from "../../assets/teclado.png" 
 // Tipos para as props dos componentes
 import { IconDefinition } from '@fortawesome/fontawesome-common-types'; // Importando o tipo de ícone correto
 
@@ -42,7 +42,7 @@ export function Contacte() {
       </style>
 
       <section id='header'>
-        <img src="src/assets/teclado.png" alt="Teclado" id='img' />
+        <img src={teclado} alt="Teclado" id='img' />
         <div id="textos">
           <h2 id='title'>Contacte-nos</h2>
           <p id='text'>

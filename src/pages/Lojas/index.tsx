@@ -2,15 +2,22 @@ import * as S from './styles'; // Importa os estilos (styled-components)
 import AliceCarousel from 'react-alice-carousel'; // Importa o componente de carrossel (biblioteca AliceCarousel)
 import 'react-alice-carousel/lib/alice-carousel.css'; // Importa o estilo CSS do AliceCarousel
 import { Link } from 'react-router-dom'; // Importa o Link para navegação entre páginas
+import anuncio from "../../assets/anuncio.png"
+import anuncio2 from "../../assets/anuncio2.webp"
+import anuncio3 from "../../assets/anuncio3.png"
+import anuncio4 from "../../assets/anuncio4.png"
+import anuncio5 from "../../assets/anuncio5.png"
+
+import imgloja from  '../../assets/empresas.png'
 
 export function Lojas() { // Define o componente funcional Lojas
   // Array de itens para o carrossel (cada item é uma imagem de anúncio)
   const items = [
-    <img src="src/assets/anuncio.png" alt="Anúncio 1" className='carrosselImg' />,
-    <img src="src/assets/anuncio2.webp" alt="Anúncio 2" className='carrosselImg' />,
-    <img src="src/assets/anuncio3.png" alt="Anúncio 3" className='carrosselImg' />,
-    <img src="src/assets/anuncio4.png" alt="Anúncio 4" className='carrosselImg' />,
-    <img src="src/assets/anuncio5.png" alt="Anúncio 5" className='carrosselImg' />,
+    <img src={anuncio} alt="Anúncio 1" className='carrosselImg' />,
+    <img src={anuncio2} alt="Anúncio 2" className='carrosselImg' />,
+    <img src={anuncio3} alt="Anúncio 3" className='carrosselImg' />,
+    <img src={anuncio4} alt="Anúncio 4" className='carrosselImg' />,
+    <img src={anuncio5} alt="Anúncio 5" className='carrosselImg' />,
   ];
 
   // Cria um array de objetos para as lojas, com propriedades como nome, descrição, imagem e avaliação
@@ -18,7 +25,7 @@ export function Lojas() { // Define o componente funcional Lojas
     id: index, // Define o ID da loja como o índice no array
     nome: `Nome da Empresa ${index + 1}`, // Nome da loja, com base no índice
     descricao: 'Texto referente à empresa. Texto bem minimalista feito pela empresa.', // Descrição da loja
-    imgSrc: 'src/assets/empresas.png', // Imagem padrão para as lojas
+    imgSrc:imgloja, // Imagem padrão para as lojas
     estrelas: 5, // Número de estrelas de avaliação
   }));
 

@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import * as S from './styles';
 import logo from "../../assets/logo.png"
+import perfil1 from "../../assets/homemperfil1.png"
+import perfil2 from "../../assets/mulherperfil.png"
+import perfil3 from "../../assets/homemperfil2.png"
+import parcerias from "../../assets/parcerias.png"
+import ranking from "../../assets/ranking.png"
+import manutencao from "../../assets/manutencoes.png"
+import chat from "../../assets/chat.png"
+import mulher from "../../assets/mulher.png"
 
 export function Home() {
   // Estado para gerenciar os depoimentos
@@ -8,17 +16,17 @@ export function Home() {
     {
       userName: "João Silva",
       feedback: "O BCTech facilitou muito a minha vida! Encontrei a assistência que precisava rapidamente.",
-      profileImage: "src/assets/homemperfil1.png"
+      profileImage: perfil1
     },
     {
       userName: "Maria Oliveira",
       feedback: "A plataforma é intuitiva e tem várias opções. Recomendo a todos!",
-      profileImage: "src/assets/mulherperfil.png"
+      profileImage: perfil2
     },
     {
       userName: "Carlos Mendes",
       feedback: "Excelente ideia! Meus negócios cresceram com as parcerias que encontrei aqui.",
-      profileImage: "src/assets/homemperfil2.png"
+      profileImage: perfil3
     }
   ]);
 
@@ -28,12 +36,13 @@ export function Home() {
       {
         userName: "Fernanda Lima",
         feedback: "Achei incrível como posso encontrar serviços de forma rápida e segura!",
-        profileImage: "src/assets/homemperfil3.png"
+        profileImage:perfil2
+        
       },
       {
         userName: "Ricardo Gomes",
         feedback: "A plataforma realmente ajudou a conectar o meu negócio com novos clientes!",
-        profileImage: "src/assets/mulherperfil2.png"
+        profileImage:perfil1
       }
     ];
 
@@ -63,14 +72,14 @@ export function Home() {
         <div id='funcao'>
           <div>
             <FeatureCard
-              imageSrc="src/assets/parcerias.png"
+              imageSrc= {parcerias}
               altText="Imagem representando parcerias"
               title="PARCERIAS"
               description="EMPRESAS PARCEIRAS DISPONIBILIZANDO SEUS SERVIÇOS"
               isOdd
             />
             <FeatureCard
-              imageSrc="src/assets/ranking.png"
+              imageSrc={ranking}
               altText="Imagem representando ranking por estrelas"
               title="RANKING"
               description="RANKING DE EMPRESAS BASEADO EM AVALIAÇÕES DOS USUÁRIOS"
@@ -78,13 +87,13 @@ export function Home() {
           </div>
           <div>
             <FeatureCard
-              imageSrc="src/assets/manutencoes.png"
+              imageSrc={manutencao}
               altText="Imagem representando manutenções"
               title="MANUTENÇÕES"
               description="OFERTAS DE SERVIÇOS DE MANUTENÇÃO E AUXÍLIO AOS USUÁRIOS"
             />
             <FeatureCard
-              imageSrc="src/assets/chat.png"
+              imageSrc={chat}
               altText="Imagem representando chats"
               title="CHAT"
               description="ATENDIMENTO VIRTUAL PARA SERVIÇOS SIMPLES"
@@ -96,7 +105,7 @@ export function Home() {
 
       {/* Seção Sobre */}
       <section id='sobre'>
-        <img src="src/assets/mulher.png" alt="Mulher mexendo em um notebook" id='mulher' />
+        <img src={mulher} alt="Mulher mexendo em um notebook" id='mulher' />
         <div id='width'>
           <h1>Sobre o BCTech</h1>
           <p id="topico">Objetivo da plataforma</p>

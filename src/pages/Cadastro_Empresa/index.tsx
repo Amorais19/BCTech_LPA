@@ -1,7 +1,7 @@
 import * as S from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
-
+import voltar from "../../assets/voltar.png"
 export function Cadastro_Empresa() {
   return (
     <S.Section>
@@ -12,7 +12,7 @@ export function Cadastro_Empresa() {
       {/* Fundo e Botão de Voltar */}
       <div id='fundoB'>
         <a href="/">
-          <img src="src/assets/voltar.png" alt="voltar" id='img' />
+          <img src={voltar} alt="voltar" id='img' />
         </a>
       </div>
 

@@ -3,7 +3,9 @@ import * as S from './styles'; // Certifique-se de que o caminho está correto
 
 import phoneImg from '../../assets/phone.png';
 import locationImg from '../../assets/loc.png'; // Substitua pelo caminho correto
-
+import imgdotitulo from '../../assets/empresas.png'
+import fundoperfil from "../../assets/fundoperfil.png"
+import mascote from "../../assets/mascote.webp"
 export function Loja_Perfil() {
   const [isChatOpen, setChatOpen] = useState(false);
   const [message, setMessage] = useState('');
@@ -47,21 +49,21 @@ export function Loja_Perfil() {
 
   // Array de objetos com títulos, textos e imagens
   const squaresData = [
-    { id: 'aligntext', title: 'Título 1', text: 'Texto descritivo para o primeiro item.', imgSrc: 'src/assets/empresas.png' },
-    { id: 'aligntext', title: 'Título 2', text: 'Texto descritivo para o segundo item.', imgSrc: 'src/assets/empresas.png' },
-    { id: 'aligntext', title: 'Título 3', text: 'Texto descritivo para o terceiro item.', imgSrc: 'src/assets/empresas.png' },
+    { id: 'aligntext', title: 'Título 1', text: 'Texto descritivo para o primeiro item.', imgSrc: imgdotitulo },
+    { id: 'aligntext', title: 'Título 2', text: 'Texto descritivo para o segundo item.', imgSrc: imgdotitulo },
+    { id: 'aligntext', title: 'Título 3', text: 'Texto descritivo para o terceiro item.', imgSrc: imgdotitulo },
 ];
 
 const squaresservico = [
-    { id: 'servico', imgSrc: 'src/assets/empresas.png', text: 'Serviço 1: Manutenção de Equipamento', technician: 'Silvio Carmaro', estimatedTime: '1 hora', description: 'Verificação e manutenção de equipamentos eletrônicos, garantindo que tudo funcione perfeitamente.', price: 'R$ 100,00' },
-    { id: 'servico', imgSrc: 'src/assets/empresas.png', text: 'Serviço 2: Limpeza de Equipamentos', technician: 'Lúcia Mavieira', estimatedTime: '30 minutos', description: 'Limpeza interna e externa de aparelhos, removendo poeira e sujeira acumulada.', price: 'R$ 50,00' },
-    { id: 'servico', imgSrc: 'src/assets/empresas.png', text: 'Serviço 3: Instalação de Equipamentos', technician: 'José Leando', estimatedTime: '2 horas', description: 'Instalação de novos aparelhos com testes completos, garantindo que tudo esteja em perfeito estado.', price: 'R$ 200,00' },
+    { id: 'servico', imgSrc: imgdotitulo, text: 'Serviço 1: Manutenção de Equipamento', technician: 'Silvio Carmaro', estimatedTime: '1 hora', description: 'Verificação e manutenção de equipamentos eletrônicos, garantindo que tudo funcione perfeitamente.', price: 'R$ 100,00' },
+    { id: 'servico', imgSrc: imgdotitulo, text: 'Serviço 2: Limpeza de Equipamentos', technician: 'Lúcia Mavieira', estimatedTime: '30 minutos', description: 'Limpeza interna e externa de aparelhos, removendo poeira e sujeira acumulada.', price: 'R$ 50,00' },
+    { id: 'servico', imgSrc: imgdotitulo, text: 'Serviço 3: Instalação de Equipamentos', technician: 'José Leando', estimatedTime: '2 horas', description: 'Instalação de novos aparelhos com testes completos, garantindo que tudo esteja em perfeito estado.', price: 'R$ 200,00' },
 ];
 
   return (
     <S.Section>
       <section id='quadro'>
-        <img src="src/assets/fundoperfil.png" alt="teclado" id='img' />
+        <img src={fundoperfil} alt="teclado" id='img' />
         <div id='grid'>
           {squaresData.map((item, index) => (
             <div className='square' key={index}>
@@ -144,7 +146,7 @@ const squaresservico = [
       {!isChatOpen && (
         <div className="stylish-chat-container" onClick={toggleChat}>
           <div className="chat-content">
-            <img className="chat-avatar" src="src/assets/mascote.webp" alt="Chat Mascote" />
+            <img className="chat-avatar" src={mascote} alt="Chat Mascote" />
             <div className="chat-message">Entre em contato e descubra como podemos ajudar!</div>
           </div>
         </div>
@@ -155,7 +157,7 @@ const squaresservico = [
         <div className="chat-modal" ref={modalRef}>
           <div className="chat-body">
             <div className="header-question">
-              <img className="mascot-image" src="src/assets/mascote.webp" alt="Mascote" />
+              <img className="mascot-image" src={mascote} alt="Mascote" />
               <p>Como posso te ajudar?</p>
             </div>
             <div className='bot'>
