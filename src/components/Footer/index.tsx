@@ -1,5 +1,8 @@
 import * as S from "./styles"
-
+import home from "../../assets/home.png" 
+import conecte from "../../assets/contacte.png"
+import cadastro from "../../assets/cadastro.png"
+import login from "../../assets/login.png"
 export function Footer() {
     return (
         <S.Footer>
@@ -12,22 +15,22 @@ export function Footer() {
                 <div id="sessao">
                     <h3 id="title">Menu</h3>
                     <div id="icons">
-                        <img src="src/assets/home.png" alt="home" id="img"/>
+                        <img src={home} alt="home" id="img"/>
                         <a href="/"><p id="text">Home</p></a>
                     </div>
                     <div id="icons">
-                        <img src="src/assets/contacte.png" alt="contacte-nos" id="img"/>
+                        <img src={conecte} alt="contacte-nos" id="img"/>
                         <a href="/Contacte-nos"><p id="text">Contacte-nos</p></a>
                     </div>
                 </div>
                 <div id="sessao">
                     <h3 id="title">Junte-se a nós</h3>
                     <div id="icons">
-                        <img src="src/assets/cadastro.png" alt="cadastre-se" id="img"/>
+                        <img src={cadastro} alt="cadastre-se" id="img"/>
                         <a href="/Cadastre-se_Empresa"><p id="text">Cadastre-se</p></a>
                     </div>
                     <div id="icons">
-                        <img src="src/assets/login.png" alt="login" id="img"/>
+                        <img src={login} alt="login" id="img"/>
                         <a href="/Login"><p id="text">Login</p></a>
                     </div>
                 </div>
